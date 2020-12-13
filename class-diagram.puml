@@ -1,0 +1,96 @@
+@startuml FreelanceMarket
+
+class User <<Entity>> {
+  + activeRole: Role
+  + name: String
+  + messages: Messages[]
+  + sendMessage()
+  + changeRole()
+}
+
+class Buyer <<Entity>> {
+  + boughtOrders: BoughtOrders[]
+  + searchService(): 
+  + buy(): 
+  + rateAndComment() 
+}
+
+class Seller <<Entity>> {
+  + country: String
+  + description: String
+  + soldOrders: SoldOrders[]
+  + comments: Comments[]
+  + specialty: Specialty[]
+  + rate: Number
+  + jobs: Job[]
+  + createJob()
+  + startOrder()
+  + finishOrder()
+  + cancelOrder()
+}
+
+class Order <<Entity>> {
+  + job: Job
+  + buyer: Buyer
+  + date: String
+}
+
+class OrderDetail <<Entity>> {
+  + order: Order
+  + buyerName: String
+  + jobTitle: String
+  + price: Number
+  + status: Status[]
+}
+
+class Job <<Entity>> {
+  + seller: Seller
+  + title: String
+  + content: String
+  + price: Number
+  + deliveryTime: Number
+  + buyers: Buyer[] 
+}
+
+enum Role {
+  SELLER
+  BUYER
+}
+
+enum Status {
+  TODO
+  INPROGRESS
+  DONE
+  CANCELED
+}
+
+class Specialty <<ValueObject>> {
+  + seller: Seller
+  + field: String
+  + experience: Number
+}
+
+class Messages <<ValueObject>> {
+  + user: User
+  + job: Job
+  + content: String
+}
+
+
+Buyer -up|> User
+Seller -up-|> User
+User "0..n" *--> "0..n" Messages
+Order "0..n" *--> "1" OrderDetail
+Seller "0..n" *--> "0..n" Job
+Job "0..n" *--> "0..n" Order
+Buyer "0..n" *--> "0..n" Order
+Seller "0..n" *--> "1..n" Specialty
+Role -left- User
+Status -left- OrderDetail
+
+note left of User : Every user can switch between\n "Buyer" and "Seller" roles.
+note "Order has to have a job and\na buyer, in order to be created." as N2
+Buyer .. N2
+N2 .. Order
+
+@enduml
