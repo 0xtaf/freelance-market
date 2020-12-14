@@ -9,7 +9,7 @@ class User <<Entity>> {
 }
 
 class Buyer <<Entity>> {
-  + boughtOrders: BoughtOrders[]
+  + orders: Order[]
   + searchService(): 
   + buy(): 
   + rateAndComment() 
@@ -18,7 +18,7 @@ class Buyer <<Entity>> {
 class Seller <<Entity>> {
   + country: String
   + description: String
-  + soldOrders: SoldOrders[]
+  + orders: Order[]
   + comments: Comments[]
   + specialty: Specialty[]
   + rate: Number
@@ -33,15 +33,10 @@ class Order <<Entity>> {
   + job: Job
   + buyer: Buyer
   + date: String
-}
-
-class OrderDetail <<Entity>> {
-  + order: Order
-  + buyerName: String
-  + jobTitle: String
   + price: Number
   + status: Status[]
 }
+
 
 class Job <<Entity>> {
   + seller: Seller
@@ -80,13 +75,12 @@ class Messages <<ValueObject>> {
 Buyer -up|> User
 Seller -up-|> User
 User "0..n" *--> "0..n" Messages
-Order "0..n" *--> "1" OrderDetail
 Seller "0..n" *--> "0..n" Job
 Job "0..n" *--> "0..n" Order
 Buyer "0..n" *--> "0..n" Order
 Seller "0..n" *--> "1..n" Specialty
 Role -left- User
-Status -left- OrderDetail
+Status -left- Order
 
 note left of User : Every user can switch between\n "Buyer" and "Seller" roles.
 note "Order has to have a job and\na buyer, in order to be created." as N2
