@@ -27,6 +27,8 @@ class Seller <<Entity>> {
   + startOrder()
   + finishOrder()
   + cancelOrder()
+  + updateProfile()
+  + addSpecialty()
 }
 
 class Order <<Entity>> {
@@ -34,6 +36,8 @@ class Order <<Entity>> {
   + buyer: Buyer
   + date: String
   + price: Number
+  + rating: Number
+  + comment: String
   + status: Status[]
 }
 
