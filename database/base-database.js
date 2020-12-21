@@ -32,7 +32,7 @@ class BaseDatabase {
 
   update(object) {
     const objects = this.load()
-
+    console.log("35", objects)
     const index = objects.findIndex(o => o.id == object.id)
 
     if (index == -1) throw new Error(`Cannot find ${this.model.name} instance with id ${object.id}`)
