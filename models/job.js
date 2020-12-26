@@ -1,18 +1,18 @@
 const { v4: uuidv4 } = require('uuid')
 
 class Job {
-  constructor(id = uuidv4(), seller, title, content, price, deliveryTime, buyers=[]){
+  constructor(id = uuidv4(), freelancer, title, content, price, deliveryTime, employers=[]){
     this.id = id
-    this.seller = seller
+    this.freelancer = freelancer
     this.title = title
     this.content = content
     this.price = price
     this.deliveryTime = deliveryTime
-    this.buyers = buyers
+    this.employers = employers
   }
 
-  static create({id, seller, title, content, price, deliveryTime, buyers}) {
-    return new Job(id, seller, title, content, price, deliveryTime, buyers)
+  static create({id, freelancer, title, content, price, deliveryTime, employers}) {
+    return new Job(id, freelancer, title, content, price, deliveryTime, employers)
   }
 }
 

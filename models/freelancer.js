@@ -2,7 +2,7 @@ const { User } = require('./user')
 const Job = require('./job')
 const { status } = require('./order')
 
-class Seller extends User {
+class Freelancer extends User {
   constructor(id, activeRole, name, messages, country = '', description = '', orders = [], specialty = [], comments = [], rating = 0, jobs = []) {
     super(id, activeRole, name, messages)
     this.country = country
@@ -25,7 +25,7 @@ class Seller extends User {
   }
 
   createJob({title, content, price, deliveryTime}){
-    const job = Job.create({seller: this, title, content, price, deliveryTime})
+    const job = Job.create({freelancer: this, title, content, price, deliveryTime})
     this.jobs.push(job.title)
     return job
   }
@@ -41,8 +41,8 @@ class Seller extends User {
   }
 
   static create({id, activeRole, name, messages, country, description, orders, specialty, comments, rating, jobs}) {
-    return new Seller(id, activeRole, name, messages, country,description, orders, specialty, comments, rating, jobs)
+    return new Freelancer(id, activeRole, name, messages, country,description, orders, specialty, comments, rating, jobs)
   }
 }
 
-module.exports = Seller
+module.exports = Freelancer

@@ -10,9 +10,9 @@ const status = {
 Object.freeze(status);
 
 class Order {
-  constructor(id = uuidv4(), buyer, job, price = job.price, status = 'todo', rating = 0, comment = '', date = new Date()) {
+  constructor(id = uuidv4(), employer, job, price = job.price, status = 'todo', rating = 0, comment = '', date = new Date()) {
     this.id = id
-    this.buyer = buyer
+    this.employer = employer
     this.job = job
     this.price = price
     this.status = status
@@ -21,8 +21,8 @@ class Order {
     this.date = date
   }
 
-  static create({id, buyer, job, status, rating, comment, date}) {
-    return new Order(id, buyer, job, status, rating, comment, date)
+  static create({id, employer, job, status, rating, comment, date}) {
+    return new Order(id, employer, job, status, rating, comment, date)
   }
 }
 

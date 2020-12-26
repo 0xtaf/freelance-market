@@ -1,14 +1,14 @@
 const { v4: uuidv4 } = require('uuid');
 
 const roles = {
-  BUYER: "buyer",
-  SELLER: "seller",
+  EMPLOYER: "employer",
+  FREELANCER: "freelancer",
 }
 
 Object.freeze(roles);
 
 class User {
-  constructor(id = uuidv4(), activeRole = roles.BUYER, name, messages = []){
+  constructor(id = uuidv4(), activeRole = roles.EMPLOYER, name, messages = []){
     this.id = id
     this.activeRole = activeRole
     this.name = name
@@ -28,11 +28,11 @@ class User {
 
   changeRole(){
     switch (this.activeRole) {
-      case 'buyer':
-        this.activeRole = roles.SELLER
+      case 'employer':
+        this.activeRole = roles.FREELANCER
         break
-      case 'seller':
-        this.activeRole = roles.BUYER
+      case 'freelancer':
+        this.activeRole = roles.EMPLOYER
         break
     }
 

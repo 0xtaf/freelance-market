@@ -2,12 +2,12 @@ const { User } = require('./user')
 const { Order } = require('./order')
 const jobDatabase = require('../database/job-database')
 
-function calculateSellerRating(order, rating) {
-  const ratedOrders = order.job.seller.orders.filter(order => order.comment != '')
-  order.job.seller.rating = (order.job.seller.rating + rating) / (ratedOrders.length)
+function calculateFreelancerRating(order, rating) {
+  const ratedOrders = order.job.freelancer.orders.filter(order => order.comment != '')
+  order.job.freelancer.rating = (order.job.freelancer.rating + rating) / (ratedOrders.length)
 }
 
-class Buyer extends User {
+class Employer extends User {
   constructor(id, activeRole, name, messages, orders = []){
     super(id, activeRole, name, messages)
     this.orders = orders
@@ -23,10 +23,10 @@ class Buyer extends User {
   }
 
   buy(job) {
-    const order = Order.create({buyer: this, job})
+    const order = Order.create({employer: this, job})
     this.orders.push(order)
-    job.seller.orders.push(order)
-    job.buyers.push(this.name)
+    job.freelancer.orders.push(order)
+    job.employers.push(this.name)
     return order
   }
 
@@ -34,12 +34,12 @@ class Buyer extends User {
     order.rating = rating
     order.comment = comment
     
-    calculateSellerRating(order, rating)
+    calculateFreelancerRating(order, rating)
   }
 
   static create({id, activeRole, name, messages, orders}) {
-    return new Buyer(id, activeRole, name, messages, orders)
+    return new Employer(id, activeRole, name, messages, orders)
   }
 }
 
-module.exports = Buyer
+module.exports = Employer

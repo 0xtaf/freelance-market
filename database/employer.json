@@ -13,7 +13,7 @@
   "name": "5",
   "messages": "6",
   "orders": "8"
-},"ef1bc1d3-0746-40c1-9f79-d1b23b66f61f","buyer","Leyla",[
+},"6be90d4f-4320-43c2-92c7-bc355de8a918","employer","Leyla",[
   "9",
   "10"
 ],[
@@ -27,7 +27,7 @@
   "content": "15"
 },{
   "id": "16",
-  "buyer": "1",
+  "employer": "1",
   "job": "13",
   "price": 30,
   "status": "17",
@@ -36,7 +36,7 @@
   "date": "19"
 },{
   "id": "20",
-  "buyer": "1",
+  "employer": "1",
   "job": "21",
   "price": 50,
   "status": "17",
@@ -45,21 +45,21 @@
   "date": "19"
 },{
   "id": "23",
-  "seller": "24",
+  "freelancer": "24",
   "title": "25",
   "content": "26",
   "price": 30,
   "deliveryTime": 3,
-  "buyers": "27"
-},"A message example","A sample response","20f8caf6-f16d-4c10-9991-33fafa983d95","todo","Great job!","2020-12-20T17:19:48.090Z","0311da0e-f19e-4e9e-b27c-b22db3bf9204",{
+  "employers": "27"
+},"A message example","A sample response","b23c9dc2-a9e1-4f20-81f3-6e73c04f67a6","todo","Great job!","2020-12-26T07:53:01.441Z","c6109a00-4e37-4d35-bef9-8ec91138c5ff",{
   "id": "28",
-  "seller": "24",
+  "freelancer": "24",
   "title": "29",
   "content": "30",
   "price": 50,
   "deliveryTime": 7,
-  "buyers": "31"
-},"Shitty job!","21395849-c89a-48aa-8227-785faff8e5f7",{
+  "employers": "31"
+},"Shitty job!","1e7825b9-628b-440c-9912-a839388706a6",{
   "id": "32",
   "activeRole": "4",
   "name": "33",
@@ -73,9 +73,9 @@
   "jobs": "40"
 },"Photoshop","Photoshop Master",[
   "5"
-],"79dab455-e520-4837-833e-ab3710c9f26d","Wordpress","All kind of websites",[
+],"f3080cd5-3114-4b1d-bfd3-e1c3c996160f","Wordpress","All kind of websites",[
   "5"
-],"ea2b01c2-ed34-4f2e-8fb9-df6bc390bddb","Mecnun",[
+],"6d99bc2e-50f7-4b3d-ac14-c6f59472078f","Mecnun",[
   "9",
   "10"
 ],"Turkey","I created Facebook",[

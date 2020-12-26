@@ -11,10 +11,10 @@
   "activeRole": "4",
   "name": "8",
   "messages": "9"
-},"ef1bc1d3-0746-40c1-9f79-d1b23b66f61f","buyer","Leyla",[
+},"6be90d4f-4320-43c2-92c7-bc355de8a918","employer","Leyla",[
   "10",
   "11"
-],"ea2b01c2-ed34-4f2e-8fb9-df6bc390bddb","Mecnun",[
+],"6d99bc2e-50f7-4b3d-ac14-c6f59472078f","Mecnun",[
   "10",
   "11"
 ],{
@@ -25,13 +25,13 @@
   "content": "14"
 },{
   "id": "15",
-  "seller": "16",
+  "freelancer": "16",
   "title": "17",
   "content": "18",
   "price": 30,
   "deliveryTime": 3,
-  "buyers": "19"
-},"A message example","A sample response","21395849-c89a-48aa-8227-785faff8e5f7",{
+  "employers": "19"
+},"A message example","A sample response","1e7825b9-628b-440c-9912-a839388706a6",{
   "id": "7",
   "activeRole": "4",
   "name": "8",
@@ -55,7 +55,7 @@
   "29"
 ],{
   "id": "30",
-  "buyer": "31",
+  "employer": "31",
   "job": "12",
   "price": 30,
   "status": "32",
@@ -64,7 +64,7 @@
   "date": "34"
 },{
   "id": "35",
-  "buyer": "31",
+  "employer": "31",
   "job": "36",
   "price": 50,
   "status": "32",
@@ -74,23 +74,23 @@
 },{
   "field": "38",
   "experience": 10
-},"Wordpress","20f8caf6-f16d-4c10-9991-33fafa983d95",{
+},"Wordpress","b23c9dc2-a9e1-4f20-81f3-6e73c04f67a6",{
   "id": "3",
   "activeRole": "4",
   "name": "5",
   "messages": "6",
   "orders": "39"
-},"todo","Great job!","2020-12-20T17:19:48.090Z","0311da0e-f19e-4e9e-b27c-b22db3bf9204",{
+},"todo","Great job!","2020-12-26T07:53:01.441Z","c6109a00-4e37-4d35-bef9-8ec91138c5ff",{
   "id": "40",
-  "seller": "16",
+  "freelancer": "16",
   "title": "29",
   "content": "41",
   "price": 50,
   "deliveryTime": 7,
-  "buyers": "42"
+  "employers": "42"
 },"Shitty job!","Web Development",[
   "26",
   "27"
-],"79dab455-e520-4837-833e-ab3710c9f26d","All kind of websites",[
+],"f3080cd5-3114-4b1d-bfd3-e1c3c996160f","All kind of websites",[
   "5"
 ]]
