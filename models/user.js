@@ -15,7 +15,6 @@ class User {
     this.messages = messages
   }
 
-  //message göndermeye bakılacak
   sendMessage(user, job, content){
     const message = {
       job,
