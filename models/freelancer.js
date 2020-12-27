@@ -40,8 +40,8 @@ class Freelancer extends User {
     order.status = status.CANCELED
   }
 
-  static create({id, activeRole, name, messages, country, description, orders, specialty, comments, rating, jobs}) {
-    return new Freelancer(id, activeRole, name, messages, country,description, orders, specialty, comments, rating, jobs)
+  static create(user) {
+    return new Freelancer(user.id, user.activeRole, user.name, user.messages, user.country, user.description, user.orders, user.specialty, user.comments, user.rating, user.jobs)
   }
 }
 
