@@ -1,6 +1,8 @@
 const { User } = require('./user')
 const Job = require('./job')
 const { status } = require('./order')
+const orderDatabase = require('../database/order-database')
+
 
 class Freelancer extends User {
   constructor(id, activeRole, name, messages, country = '', description = '', orders = [], specialty = [], comments = [], rating = 0, jobs = []) {
@@ -30,14 +32,17 @@ class Freelancer extends User {
     return job
   }
 
-  startOrder(order){
+  async startOrder(order){
     order.status = status.INPROGRESS
+    await orderDatabase.update(order)
   }
-  finishOrder(order){
+  async finishOrder(order){
     order.status = status.DONE
+    await orderDatabase.update(order)
   }
-  cancelOrder(order){
+  async cancelOrder(order){
     order.status = status.CANCELED
+    await orderDatabase.update(order)
   }
 
   static create(user) {
