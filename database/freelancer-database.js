@@ -2,8 +2,8 @@ const BaseDatabase = require('./base-database')
 const Freelancer = require('../models/freelancer')
 
 class FreelancerDatabase extends BaseDatabase {
-  findByUserName(name) {
-    return this.findBy('name', name)
+  async findByUserName(name) {
+    return await this.findBy('name', name)
   }
 }
 
