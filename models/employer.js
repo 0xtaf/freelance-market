@@ -23,11 +23,15 @@ class Employer extends User {
   }
 
   buy(job) {
-    const order = Order.create({employer: this, job})
-    this.orders.push(order)
-    job.freelancer.orders.push(order)
-    job.employers.push(this.name)
-    return order
+    try {
+      const order = Order.create({employer: this, job})
+      this.orders.push(order)
+      job.freelancer.orders.push(order)
+      job.employers.push(this.name)
+      return order
+    } catch (e) {
+      console.log(e)
+    }
   }
 
   rateAndComment(order, rating, comment) {
@@ -37,8 +41,8 @@ class Employer extends User {
     calculateFreelancerRating(order, rating)
   }
 
-  static create({id, activeRole, name, messages, orders}) {
-    return new Employer(id, activeRole, name, messages, orders)
+  static create(user) {
+    return new Employer(user.id, user.activeRole, user.name, user.messages, user.orders)
   }
 }
 
