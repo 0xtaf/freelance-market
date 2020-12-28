@@ -1,7 +1,7 @@
 const { v4: uuidv4 } = require('uuid')
 
 class Job {
-  constructor(id = uuidv4(), freelancer, title, content, price, deliveryTime, employers=[]){
+  constructor(id = uuidv4(), freelancer ='', title, content, price, deliveryTime, employers=[]){
     this.id = id
     this.freelancer = freelancer
     this.title = title
