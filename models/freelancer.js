@@ -27,7 +27,7 @@ class Freelancer extends User {
   }
 
   createJob({title, content, price, deliveryTime}){
-    const job = Job.create({freelancer: this, title, content, price, deliveryTime})
+    const job = Job.create({freelancer: this.id, title, content, price, deliveryTime})
     this.jobs.push(job.title)
     return job
   }
