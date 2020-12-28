@@ -1,6 +1,9 @@
 const { User } = require('./user')
 const { Order } = require('./order')
 const jobDatabase = require('../database/job-database')
+const fs = require('fs')
+
+const path = process.cwd()+'/database/order.json'
 
 function calculateFreelancerRating(order, rating) {
   const ratedOrders = order.job.freelancer.orders.filter(order => order.comment != '')
@@ -13,8 +16,8 @@ class Employer extends User {
     this.orders = orders
   }
 
-  searchService(keyword){
-    const job = jobDatabase.findByKeyword(keyword)
+  async searchService(keyword){
+    const job = await jobDatabase.findByKeyword(keyword)
     if (typeof job == 'string') {
       console.log(job)
     } else {
@@ -22,22 +25,40 @@ class Employer extends User {
     }
   }
 
-  buy(job) {
+  async buy(job) {
+    const employerDatabase = require('../database/employer-database')
+    const freelancerDatabase = require('../database/freelancer-database')
+    const orderDatabase = require('../database/order-database')
+
     try {
       const order = Order.create({employer: this, job})
       this.orders.push(order)
-      job.freelancer.orders.push(order)
       job.employers.push(this.name)
-      return order
+      await employerDatabase.update(this)  
+      const freelancer = await freelancerDatabase.findBy('id', order.job.freelancer)
+      freelancer.orders.push(order)
+      await freelancerDatabase.update(freelancer)
+
+      try {
+        if(fs.existsSync(path)) {
+          await orderDatabase.insert(order)
+          return order
+        } else {
+          await orderDatabase.save([order])
+        }
+      } catch (err) {
+          console.error(err);
+      }
+      
     } catch (e) {
       console.log(e)
     }
   }
 
-  rateAndComment(order, rating, comment) {
+  async rateAndComment(order, rating, comment) {
     order.rating = rating
     order.comment = comment
-    
+
     calculateFreelancerRating(order, rating)
   }
 
