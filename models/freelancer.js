@@ -16,14 +16,20 @@ class Freelancer extends User {
     this.jobs = jobs
   }
 
-  addSpecialty(field, experience){
+  async addSpecialty(field, experience){
+    const freelancerDatabase = require('../database/freelancer-database')
+
     const specialty = { field, experience }
     this.specialty.push(specialty)
+    await freelancerDatabase.update(this)
   }
 
-  updateProfile(country, description) {
+  async updateProfile(country, description) {
+    const freelancerDatabase = require('../database/freelancer-database')
+
     this.country = country
     this.description = description
+    await freelancerDatabase.update(this)
   }
 
   createJob({title, content, price, deliveryTime}){
