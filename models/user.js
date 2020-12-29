@@ -15,7 +15,9 @@ class User {
     this.messages = messages
   }
 
-  sendMessage(user, job, content){
+  async sendMessage(user, job, content){
+    const userDatabase = require('../database/user-database')
+
     const message = {
       job,
       content
@@ -23,15 +25,27 @@ class User {
 
     this.messages.push(message)
     user.messages.push(message)
+    await userDatabase.update(this)
+    await userDatabase.update(user)
   }
 
-  changeRole(){
+  async changeRole(){
+    const userDatabase = require('../database/user-database')
+    const freelancerDatabase = require('../database/freelancer-database')
+    const employerDatabase = require('../database/employer-database')
+    
     switch (this.activeRole) {
       case 'employer':
         this.activeRole = roles.FREELANCER
+        await userDatabase.update(this)
+        await freelancerDatabase.update(this)
+        await employerDatabase.update(this)
         break
       case 'freelancer':
         this.activeRole = roles.EMPLOYER
+        await userDatabase.update(this)
+        await freelancerDatabase.update(this)
+        await employerDatabase.update(this)
         break
     }
 
