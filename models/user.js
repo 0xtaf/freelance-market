@@ -15,9 +15,7 @@ class User {
     this.messages = messages
   }
 
-  async sendMessage(user, job, content){
-    const userDatabase = require('../database/user-database')
-
+  sendMessage(user, job, content){
     const message = {
       job,
       content
@@ -25,8 +23,6 @@ class User {
 
     this.messages.push(message)
     user.messages.push(message)
-    await userDatabase.update(this)
-    await userDatabase.update(user)
   }
 
   async changeRole(){
