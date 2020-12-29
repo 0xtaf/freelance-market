@@ -22,7 +22,7 @@ class Order {
   }
 
   static create({id, employer, job, status, rating, comment, date}) {
-    return new Order(id, employer, job, job.price, status, job.rating, job.comment, date)
+    return new Order(id, employer, job, job.price, status, rating, comment, date)
   }
 }
 
