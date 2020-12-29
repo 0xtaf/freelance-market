@@ -1,14 +1,11 @@
 const { User } = require('./user')
 const { Order } = require('./order')
 const jobDatabase = require('../database/job-database')
+const orderDatabase = require('../database/order-database')
+const freelancerDatabase = require('../database/freelancer-database')
 const fs = require('fs')
 
 const path = process.cwd()+'/database/order.json'
-
-function calculateFreelancerRating(order, rating) {
-  const ratedOrders = order.job.freelancer.orders.filter(order => order.comment != '')
-  order.job.freelancer.rating = (order.job.freelancer.rating + rating) / (ratedOrders.length)
-}
 
 class Employer extends User {
   constructor(id, activeRole, name, messages, orders = []){
@@ -17,18 +14,20 @@ class Employer extends User {
   }
 
   async searchService(keyword){
-    const job = await jobDatabase.findByKeyword(keyword)
-    if (typeof job == 'string') {
-      console.log(job)
-    } else {
-      console.log(`${keyword} için ${job.length} adet ilan bulundu`)
+    try {
+      const job = await jobDatabase.findByKeyword(keyword)
+      if (typeof job == 'string') {
+        console.log(job)
+      } else {
+        console.log(`${keyword} için ${job.length} adet ilan bulundu`)
+      }
+    } catch (e) {
+      console.log(e)
     }
   }
 
   async buy(job) {
     const employerDatabase = require('../database/employer-database')
-    const freelancerDatabase = require('../database/freelancer-database')
-    const orderDatabase = require('../database/order-database')
 
     try {
       const order = Order.create({employer: this, job})
@@ -45,9 +44,10 @@ class Employer extends User {
           return order
         } else {
           await orderDatabase.save([order])
+          return order
         }
-      } catch (err) {
-          console.error(err);
+      } catch (e) {
+          console.error(e);
       }
       
     } catch (e) {
@@ -58,8 +58,7 @@ class Employer extends User {
   async rateAndComment(order, rating, comment) {
     order.rating = rating
     order.comment = comment
-
-    calculateFreelancerRating(order, rating)
+    await orderDatabase.update(order)
   }
 
   static create(user) {
