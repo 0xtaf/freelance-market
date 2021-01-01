@@ -1,8 +1,6 @@
 const { User } = require('./user')
 const { Order } = require('./order')
 const jobDatabase = require('../database/job-database')
-const orderDatabase = require('../database/order-database')
-const freelancerDatabase = require('../database/freelancer-database')
 const fs = require('fs')
 
 const path = process.cwd()+'/database/order.json'
@@ -27,38 +25,16 @@ class Employer extends User {
   }
 
   async buy(job) {
-    const employerDatabase = require('../database/employer-database')
-
-    try {
-      const order = Order.create({employer: this, job})
-      this.orders.push(order)
-      job.employers.push(this.name)
-      await employerDatabase.update(this)  
-      const freelancer = await freelancerDatabase.findBy('id', order.job.freelancer)
-      freelancer.orders.push(order)
-      await freelancerDatabase.update(freelancer)
-
-      try {
-        if(fs.existsSync(path)) {
-          await orderDatabase.insert(order)
-          return order
-        } else {
-          await orderDatabase.save([order])
-          return order
-        }
-      } catch (e) {
-          console.error(e);
-      }
-      
-    } catch (e) {
-      console.log(e)
-    }
+    const order = Order.create({employer: this, job})
+    this.orders.push(order)
+    job.freelancer.orders.push(order)
+    job.employers.push(this.name)
+    return order
   }
 
-  async rateAndComment(order, rating, comment) {
+  rateAndComment(order, rating, comment) {
     order.rating = rating
     order.comment = comment
-    await orderDatabase.update(order)
   }
 
   static create(user) {

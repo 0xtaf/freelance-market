@@ -4,23 +4,25 @@ const printOrderHistory = require('./lib/print-order-history')
 async function main(){
   try {
     const user1 = await userDatabase.findByUserName('Leyla') 
-    const user2 = await userDatabase.findByUserName('Mecnun') 
     const employer1 = await employerDatabase.find(user1.id) 
-    const freelancer2 = await freelancerDatabase.findByUserName('Mecnun')
-  
-    const jobs = await jobDatabase.findByKeyword('wordpress')
-    // await employer1.buy(jobs[0]) 
-    // await user1.sendMessage(user2, jobs[0], 'Another message example')
-    // await userDatabase.update(user1)
-    // await userDatabase.update(user2)
+    const freelancer3 = await freelancerDatabase.findByUserName('Erdal')
+    
+    // const job3 = freelancer3.createJob({title: 'Translation', content: 'Eng-Tur', price:  100, deliveryTime: 6 })
+    // await jobDatabase.insert(job3)
 
-    // const orders = await orderDatabase.load()
-    // await freelancer2.finishOrder(orders[0])
-    // await freelancer2.startOrder(orders[1])
-    // await freelancer2.cancelOrder(orders[2])
-    // await user1.changeRole()
+    // const order3 = await employer1.buy(job3) 
+    // await orderDatabase.insert(order3)
+    // await employerDatabase.update(employer1)
+    // await freelancerDatabase.update(freelancer3)
+
+
+    // user1.changeRole()
+    // await userDatabase.update(user1)
+    // await employerDatabase.update(user1)
+    // await freelancerDatabase.update(user1)
+
     employer1.searchService('pho')
-    console.log("Results: ", await employerDatabase.load())
+    console.log("Results: ", await freelancerDatabase.load())
   
     printOrderHistory(employer1)
   } catch (e) {

@@ -16,41 +16,30 @@ class Freelancer extends User {
     this.jobs = jobs
   }
 
-  async addSpecialty(field, experience){
-    const freelancerDatabase = require('../database/freelancer-database')
-    const freelancer = await freelancerDatabase.findBy('id', this.id)
-
+  addSpecialty(field, experience){
     const specialty = { field, experience }
     this.specialty.push(specialty)
-    await freelancerDatabase.update(freelancer)
   }
 
-  async updateProfile(country, description) {
-    const freelancerDatabase = require('../database/freelancer-database')
-    const freelancer = await freelancerDatabase.findBy('id', this.id)
-
+  updateProfile(country, description) {
     this.country = country
     this.description = description
-    await freelancerDatabase.update(freelancer)
   }
 
   createJob({title, content, price, deliveryTime}){
-    const job = Job.create({freelancer: this.id, title, content, price, deliveryTime})
+    const job = Job.create({freelancer: this, title, content, price, deliveryTime})
     this.jobs.push(job.title)
     return job
   }
 
-  async startOrder(order){
+  startOrder(order){
     order.status = status.INPROGRESS
-    await orderDatabase.update(order)
   }
-  async finishOrder(order){
+  finishOrder(order){
     order.status = status.DONE
-    await orderDatabase.update(order)
   }
-  async cancelOrder(order){
+  cancelOrder(order){
     order.status = status.CANCELED
-    await orderDatabase.update(order)
   }
 
   static create(user) {

@@ -25,23 +25,13 @@ class User {
     user.messages.push(message)
   }
 
-  async changeRole(){
-    const userDatabase = require('../database/user-database')
-    const freelancerDatabase = require('../database/freelancer-database')
-    const employerDatabase = require('../database/employer-database')
-    
+  changeRole(){
     switch (this.activeRole) {
       case 'employer':
         this.activeRole = roles.FREELANCER
-        await userDatabase.update(this)
-        await freelancerDatabase.update(this)
-        await employerDatabase.update(this)
         break
       case 'freelancer':
         this.activeRole = roles.EMPLOYER
-        await userDatabase.update(this)
-        await freelancerDatabase.update(this)
-        await employerDatabase.update(this)
         break
     }
 
