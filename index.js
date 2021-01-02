@@ -16,17 +16,18 @@ async function main(){
     // await employerDatabase.update(employer1)
     // await freelancerDatabase.update(freelancer3)
 
-    // user1.changeRole()
-    // employer1.activeRole = user1.activeRole
-    // freelancer1.activeRole = user1.activeRole    
-    // await userDatabase.update(user1)
-    // await employerDatabase.update(employer1)
-    // await freelancerDatabase.update(freelancer1)
+    user1.changeRole()
+    employer1.changeRole()
+    freelancer1.changeRole()
+    
+    await userDatabase.update(user1)
+    await employerDatabase.update(employer1)
+    await freelancerDatabase.update(freelancer1)
 
-    // employer1.searchService('pho')
-    console.log("Results: ", (await freelancerDatabase.load()))
+    employer1.searchService('pho')
+    console.log("Results: ", await freelancerDatabase.load())
   
-    // printOrderHistory(employer1)
+    printOrderHistory(employer1)
   } catch (e) {
     console.log(e)
   }
