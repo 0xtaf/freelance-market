@@ -35,7 +35,7 @@ class User {
         break
     }
 
-     console.log(`The active role for ${this.name} is ${this.activeRole} now`)
+     return `The active role for ${this.name} is ${this.activeRole} now`
   }
 
   static create({id, activeRole, name, messages}) {
