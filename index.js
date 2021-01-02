@@ -5,6 +5,7 @@ async function main(){
   try {
     const user1 = await userDatabase.findByUserName('Leyla') 
     const employer1 = await employerDatabase.find(user1.id) 
+    const freelancer1 = await freelancerDatabase.find(user1.id) 
     const freelancer3 = await freelancerDatabase.findByUserName('Erdal')
     
     // const job3 = freelancer3.createJob({title: 'Translation', content: 'Eng-Tur', price:  100, deliveryTime: 6 })
@@ -15,16 +16,17 @@ async function main(){
     // await employerDatabase.update(employer1)
     // await freelancerDatabase.update(freelancer3)
 
-
     // user1.changeRole()
+    // employer1.activeRole = user1.activeRole
+    // freelancer1.activeRole = user1.activeRole    
     // await userDatabase.update(user1)
-    // await employerDatabase.update(user1)
-    // await freelancerDatabase.update(user1)
+    // await employerDatabase.update(employer1)
+    // await freelancerDatabase.update(freelancer1)
 
-    employer1.searchService('pho')
-    console.log("Results: ", await freelancerDatabase.load())
+    // employer1.searchService('pho')
+    console.log("Results: ", (await freelancerDatabase.load()))
   
-    printOrderHistory(employer1)
+    // printOrderHistory(employer1)
   } catch (e) {
     console.log(e)
   }
