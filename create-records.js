@@ -19,8 +19,8 @@ async function main() {
     await employerDatabase.save([employer1, employer2])
     await freelancerDatabase.save([freelancer1, freelancer2])
 
-    const job1 = freelancer2.createJob({title: 'Photoshop', content: 'Photoshop Master', price:  30, deliveryTime: 3 })
-    const job2 = freelancer2.createJob({title: 'Wordpress', content: 'All kind of websites', price: 50, deliveryTime:  7 })
+    const job1 = await freelancer2.createJob({title: 'Photoshop', content: 'Photoshop Master', price:  30, deliveryTime: 3 })
+    const job2 = await freelancer2.createJob({title: 'Wordpress', content: 'All kind of websites', price: 50, deliveryTime:  7 })
     await jobDatabase.save([job1, job2])
 
     const order1 = await employer1.buy(job1)
