@@ -1,7 +1,6 @@
 const { User } = require('./user')
 const { Order } = require('./order')
 const jobDatabase = require('../database/job-database')
-const fs = require('fs')
 
 class Employer extends User {
   constructor(id, activeRole, name, messages, orders = []){
@@ -28,9 +27,8 @@ class Employer extends User {
     return order
   }
 
-  async rateAndComment(order, rating, comment) {
-    order.rating = rating
-    order.comment = comment
+  async rateAndComment(job, rating, comment) {
+    job.ratingsAndComments.push({rating, comment})
   }
 
   static create(user) {
