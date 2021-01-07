@@ -30,7 +30,7 @@ class Employer extends User {
     return order
   }
 
-  rateAndComment(order, rating, comment) {
+  async rateAndComment(order, rating, comment) {
     order.rating = rating
     order.comment = comment
   }
