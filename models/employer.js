@@ -11,14 +11,12 @@ class Employer extends User {
     this.orders = orders
   }
 
-  async searchService(keyword){
+  async searchJob(keyword){
     try {
       const job = await jobDatabase.findByKeyword(keyword)
-      if (typeof job == 'string') {
-        console.log(job)
-      } else {
-        console.log(`${keyword} için ${job.length} adet ilan bulundu`)
-      }
+      job.length 
+        ? console.log(`${keyword} için ${job.length} adet ilan bulundu`) 
+        : console.log(`${keyword} için sonuç bulunamadı`)
     } catch (e) {
       console.log(e)
     }
