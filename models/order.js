@@ -19,8 +19,8 @@ class Order {
     this.date = date
   }
 
-  static create({id, employer, job, status, rating, comment, date}) {
-    return new Order(id, employer, job, status, rating, comment, date)
+  static create({id, employer, job, status, date}) {
+    return new Order(id, employer, job, status, date)
   }
 }
 
