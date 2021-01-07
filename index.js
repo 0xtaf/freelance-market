@@ -1,5 +1,6 @@
 const { userDatabase, freelancerDatabase, employerDatabase, jobDatabase, orderDatabase } = require('./database')
 const printOrderHistory = require('./lib/print-order-history')
+const searchJob = require('./lib/search-job')
 
 async function main(){
   try {
@@ -8,13 +9,13 @@ async function main(){
     const freelancer1 = await freelancerDatabase.find(user1.id) 
     const freelancer3 = await freelancerDatabase.findByUserName('Erdal')
     
-    // const job3 = freelancer3.createJob({title: 'Translation', content: 'Eng-Tur', price:  100, deliveryTime: 6 })
-    // await jobDatabase.insert(job3)
+    const job3 = await freelancer3.createJob({title: 'Translation', content: 'Eng-Tur', price:  100, deliveryTime: 6 })
+    await jobDatabase.insert(job3)
 
-    // const order3 = await employer1.buy(job3) 
-    // await orderDatabase.insert(order3)
-    // await employerDatabase.update(employer1)
-    // await freelancerDatabase.update(freelancer3)
+    const order3 = await employer1.buy(job3) 
+    await orderDatabase.insert(order3)
+    await employerDatabase.update(employer1)
+    await freelancerDatabase.update(freelancer3)
 
     user1.changeRole()
     employer1.changeRole()
@@ -24,7 +25,7 @@ async function main(){
     await employerDatabase.update(employer1)
     await freelancerDatabase.update(freelancer1)
 
-    employer1.searchService('pho')
+    await searchJob('pho')
     console.log("Results: ", await freelancerDatabase.load())
   
     printOrderHistory(employer1)
