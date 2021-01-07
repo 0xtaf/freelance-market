@@ -6,287 +6,317 @@
   "id": "4",
   "activeRole": "5",
   "name": "6",
-  "messages": "7",
-  "country": "8",
-  "description": "8",
-  "orders": "9",
-  "specialty": "10",
-  "comments": "11",
-  "rating": 0,
-  "jobs": "12"
+  "messages": "7"
 },{
-  "id": "13",
-  "activeRole": "5",
-  "name": "14",
-  "messages": "15",
-  "country": "8",
-  "description": "8",
-  "orders": "16",
-  "specialty": "17",
-  "comments": "18",
+  "id": "8",
+  "activeRole": "9",
+  "name": "10",
+  "messages": "11",
+  "country": "12",
+  "description": "13",
+  "orders": "14",
+  "specialty": "15",
+  "comments": "16",
   "rating": 0,
-  "jobs": "19"
+  "jobs": "17"
 },{
-  "id": "20",
-  "activeRole": "5",
-  "name": "21",
-  "messages": "22",
-  "country": "8",
-  "description": "8",
-  "orders": "23",
-  "specialty": "24",
-  "comments": "25",
+  "id": "18",
+  "activeRole": "9",
+  "name": "19",
+  "messages": "20",
+  "country": "21",
+  "description": "21",
+  "orders": "22",
+  "specialty": "23",
+  "comments": "24",
   "rating": 0,
-  "jobs": "26"
-},"40c27b86-e594-4e86-b35b-e4bee90776ee","employer","Leyla",[],"",[],[],[],[],"53a0ab89-afb3-4939-8d70-b21f5cbe3774","Mecnun",[],[
-  "27",
+  "jobs": "25"
+},"b73b9f29-dadb-4ed3-bd4a-4ac8bfead7a8","freelancer","Leyla",[
+  "26",
+  "27"
+],"3869f001-dd01-44c8-893d-fa01078ab607","employer","Mecnun",[
   "28",
-  "29",
-  "30"
-],[],[],[],"9e8f316b-fa5e-4400-86ed-53a8b5790760","Erdal",[],[],[],[],[],{
-  "id": "31",
-  "employer": "32",
-  "job": "33",
+  "29"
+],"Turkey","I created Facebook",[
+  "30",
+  "31"
+],[
+  "32"
+],[],[
+  "33",
+  "34"
+],"b9f99cad-8f3d-4907-b29e-4c24a4522683","Erdal",[],"",[
+  "35"
+],[],[],[
+  "36"
+],{
+  "job": "37",
+  "content": "38"
+},{
+  "job": "37",
+  "content": "39"
+},{
+  "job": "40",
+  "content": "38"
+},{
+  "job": "40",
+  "content": "39"
+},{
+  "id": "41",
+  "employer": "42",
+  "job": "40",
   "price": 30,
-  "status": "34",
-  "rating": 0,
-  "comment": "8",
-  "date": "35"
+  "status": "43",
+  "rating": 4,
+  "comment": "44",
+  "date": "45"
 },{
-  "id": "36",
-  "employer": "37",
-  "job": "38",
+  "id": "46",
+  "employer": "42",
+  "job": "47",
   "price": 50,
-  "status": "34",
-  "rating": 0,
-  "comment": "8",
-  "date": "39"
+  "status": "48",
+  "rating": 2,
+  "comment": "49",
+  "date": "45"
 },{
-  "id": "40",
-  "employer": "41",
-  "job": "42",
-  "price": 50,
-  "status": "34",
+  "field": "50",
+  "experience": 10
+},"Photoshop","Wordpress",{
+  "id": "51",
+  "employer": "52",
+  "job": "53",
+  "price": 100,
+  "status": "54",
   "rating": 0,
-  "comment": "8",
-  "date": "43"
-},{
-  "id": "44",
-  "employer": "45",
-  "job": "46",
-  "price": 50,
-  "status": "34",
-  "rating": 0,
-  "comment": "8",
-  "date": "47"
-},"a306f903-2d3f-4874-a80d-1a90bb222d15",{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "48",
-  "orders": "49"
-},{
-  "id": "50",
-  "freelancer": "13",
-  "title": "51",
-  "content": "52",
+  "comment": "21",
+  "date": "55"
+},"Translation",{
+  "id": "56",
+  "freelancer": "57",
+  "title": "33",
+  "content": "58",
   "price": 30,
   "deliveryTime": 3,
-  "employers": "53"
-},"todo","2020-12-29T13:45:04.683Z","e6fbb1c7-52a3-4d9b-966e-35a885b61f03",{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "54",
-  "orders": "55"
-},{
-  "id": "56",
-  "freelancer": "13",
-  "title": "57",
-  "content": "58",
-  "price": 50,
-  "deliveryTime": 7,
   "employers": "59"
-},"2020-12-29T13:45:04.704Z","8602833b-b874-4053-bef7-77ce40d63754",{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "60",
-  "orders": "61"
-},{
+},"A message example","A sample response",{
   "id": "56",
-  "freelancer": "13",
-  "title": "57",
+  "freelancer": "60",
+  "title": "33",
   "content": "58",
+  "price": 30,
+  "deliveryTime": 3,
+  "employers": "61"
+},"5c4d6076-2651-4eee-8f92-b7c873b69bb0",{
+  "id": "4",
+  "activeRole": "9",
+  "name": "6",
+  "messages": "62",
+  "orders": "63"
+},"done","Great job!","2021-01-01T07:07:01.625Z","0c21cfc9-56d4-4c03-8a50-fc0ae42afdd2",{
+  "id": "64",
+  "freelancer": "60",
+  "title": "34",
+  "content": "65",
   "price": 50,
   "deliveryTime": 7,
-  "employers": "62"
-},"2020-12-29T13:46:11.798Z","3b5b1dbf-863d-4233-9978-df45fa61676e",{
+  "employers": "66"
+},"inprogress","Shitty job!","Web Development","124b278f-1f32-4a0b-814c-8a6bc30b250b",{
   "id": "4",
-  "activeRole": "5",
+  "activeRole": "9",
   "name": "6",
-  "messages": "63",
-  "orders": "64"
+  "messages": "67",
+  "orders": "68"
 },{
-  "id": "56",
-  "freelancer": "13",
-  "title": "57",
-  "content": "58",
-  "price": 50,
-  "deliveryTime": 7,
-  "employers": "65"
-},"2020-12-29T13:46:20.500Z",[],[
-  "27"
-],"3763edfc-0a34-4eee-a575-7a9340723b4f","Photoshop","Photoshop Master",[
-  "6"
-],[],[
-  "66",
-  "28"
-],"1e1b6eed-3fc7-488a-a1e5-4bdcdec85957","Wordpress","All kind of websites",[
-  "6"
-],[],[
-  "67",
-  "68",
-  "29"
-],[
-  "6"
-],[],[
-  "69",
-  "70",
-  "71",
-  "30"
-],[
+  "id": "69",
+  "freelancer": "70",
+  "title": "36",
+  "content": "71",
+  "price": 100,
+  "deliveryTime": 6,
+  "employers": "72"
+},"todo","2021-01-01T07:07:22.829Z","4af5d8e3-5177-4e17-9787-5fd9f8eb6dec",{
+  "id": "8",
+  "activeRole": "9",
+  "name": "10",
+  "messages": "73",
+  "country": "12",
+  "description": "13",
+  "orders": "74",
+  "specialty": "75",
+  "comments": "76",
+  "rating": 0,
+  "jobs": "77"
+},"Photoshop Master",[
   "6"
 ],{
-  "id": "31",
-  "employer": "37",
-  "job": "72",
-  "price": 30,
-  "status": "34",
+  "id": "8",
+  "activeRole": "9",
+  "name": "10",
+  "messages": "11",
+  "country": "12",
+  "description": "13",
+  "orders": "14",
+  "specialty": "15",
+  "comments": "16",
   "rating": 0,
-  "comment": "8",
-  "date": "35"
-},{
-  "id": "31",
-  "employer": "73",
-  "job": "74",
-  "price": 30,
-  "status": "34",
+  "jobs": "17"
+},[
+  "6"
+],[
+  "28",
+  "29"
+],[
+  "30",
+  "31"
+],"03257218-2ccf-4c2d-9634-e204e30a6780","All kind of websites",[
+  "6"
+],[
+  "78",
+  "79"
+],[
+  "80",
+  "81",
+  "35"
+],"c0a38ab3-37d2-4c1e-b479-a3ee6797d7a3",{
+  "id": "18",
+  "activeRole": "9",
+  "name": "19",
+  "messages": "20",
+  "country": "21",
+  "description": "21",
+  "orders": "22",
+  "specialty": "23",
+  "comments": "24",
   "rating": 0,
-  "comment": "8",
-  "date": "35"
+  "jobs": "25"
+},"Eng-Tur",[
+  "6"
+],[
+  "26",
+  "27"
+],[
+  "82",
+  "83"
+],[
+  "84"
+],[],[
+  "33",
+  "34"
+],{
+  "job": "85",
+  "content": "38"
 },{
-  "id": "36",
-  "employer": "73",
-  "job": "75",
+  "job": "85",
+  "content": "39"
+},{
+  "id": "41",
+  "employer": "86",
+  "job": "85",
+  "price": 30,
+  "status": "43",
+  "rating": 4,
+  "comment": "44",
+  "date": "45"
+},{
+  "id": "46",
+  "employer": "86",
+  "job": "87",
   "price": 50,
-  "status": "34",
-  "rating": 0,
-  "comment": "8",
-  "date": "39"
+  "status": "48",
+  "rating": 2,
+  "comment": "49",
+  "date": "45"
 },{
-  "id": "31",
-  "employer": "76",
-  "job": "77",
+  "id": "41",
+  "employer": "88",
+  "job": "37",
   "price": 30,
-  "status": "34",
-  "rating": 0,
-  "comment": "8",
-  "date": "35"
+  "status": "43",
+  "rating": 4,
+  "comment": "44",
+  "date": "45"
 },{
-  "id": "36",
-  "employer": "76",
-  "job": "78",
+  "id": "46",
+  "employer": "88",
+  "job": "89",
   "price": 50,
-  "status": "34",
-  "rating": 0,
-  "comment": "8",
-  "date": "39"
+  "status": "48",
+  "rating": 2,
+  "comment": "49",
+  "date": "45"
 },{
-  "id": "40",
-  "employer": "79",
-  "job": "80",
-  "price": 50,
-  "status": "34",
-  "rating": 0,
-  "comment": "8",
-  "date": "43"
-},{
-  "id": "50",
-  "freelancer": "13",
-  "title": "51",
-  "content": "52",
-  "price": 30,
-  "deliveryTime": 3,
-  "employers": "81"
-},{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "60",
-  "orders": "61"
-},{
-  "id": "50",
-  "freelancer": "13",
-  "title": "51",
-  "content": "52",
-  "price": 30,
-  "deliveryTime": 3,
-  "employers": "82"
+  "field": "50",
+  "experience": 10
 },{
   "id": "56",
-  "freelancer": "13",
-  "title": "57",
+  "freelancer": "90",
+  "title": "33",
   "content": "58",
-  "price": 50,
-  "deliveryTime": 7,
-  "employers": "83"
-},{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "63",
-  "orders": "64"
-},{
-  "id": "50",
-  "freelancer": "13",
-  "title": "51",
-  "content": "52",
   "price": 30,
   "deliveryTime": 3,
-  "employers": "84"
-},{
-  "id": "56",
-  "freelancer": "13",
-  "title": "57",
-  "content": "58",
-  "price": 50,
-  "deliveryTime": 7,
-  "employers": "85"
+  "employers": "91"
 },{
   "id": "4",
-  "activeRole": "5",
+  "activeRole": "9",
   "name": "6",
-  "messages": "63",
-  "orders": "64"
+  "messages": "67",
+  "orders": "68"
 },{
-  "id": "56",
-  "freelancer": "13",
-  "title": "57",
-  "content": "58",
+  "id": "64",
+  "freelancer": "90",
+  "title": "34",
+  "content": "65",
   "price": 50,
   "deliveryTime": 7,
-  "employers": "86"
+  "employers": "92"
+},{
+  "id": "4",
+  "activeRole": "9",
+  "name": "6",
+  "messages": "7",
+  "orders": "93"
+},{
+  "id": "64",
+  "freelancer": "57",
+  "title": "34",
+  "content": "65",
+  "price": 50,
+  "deliveryTime": 7,
+  "employers": "94"
+},{
+  "id": "8",
+  "activeRole": "9",
+  "name": "10",
+  "messages": "95",
+  "country": "12",
+  "description": "13",
+  "orders": "96",
+  "specialty": "97",
+  "comments": "98",
+  "rating": 0,
+  "jobs": "99"
 },[
   "6"
 ],[
   "6"
 ],[
-  "6"
+  "82",
+  "83"
 ],[
   "6"
 ],[
-  "6"
+  "78",
+  "79"
 ],[
-  "6"
-]]
+  "80",
+  "81"
+],[
+  "100"
+],[],[
+  "33",
+  "34"
+],{
+  "field": "50",
+  "experience": 10
+}]

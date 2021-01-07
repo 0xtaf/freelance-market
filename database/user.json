@@ -9,74 +9,176 @@
   "messages": "7"
 },{
   "id": "8",
-  "activeRole": "5",
-  "name": "9",
-  "messages": "10"
+  "activeRole": "9",
+  "name": "10",
+  "messages": "11"
 },{
-  "id": "11",
-  "activeRole": "5",
-  "name": "12",
-  "messages": "13"
-},"40c27b86-e594-4e86-b35b-e4bee90776ee","employer","Leyla",[
-  "14",
+  "id": "12",
+  "activeRole": "9",
+  "name": "13",
+  "messages": "14"
+},"b73b9f29-dadb-4ed3-bd4a-4ac8bfead7a8","freelancer","Leyla",[
   "15",
   "16"
-],"53a0ab89-afb3-4939-8d70-b21f5cbe3774","Mecnun",[
+],"3869f001-dd01-44c8-893d-fa01078ab607","employer","Mecnun",[
   "17",
-  "18",
-  "19"
-],"9e8f316b-fa5e-4400-86ed-53a8b5790760","Erdal",[],{
-  "job": "20",
+  "18"
+],"b9f99cad-8f3d-4907-b29e-4c24a4522683","Erdal",[],{
+  "job": "19",
+  "content": "20"
+},{
+  "job": "19",
   "content": "21"
 },{
-  "job": "20",
-  "content": "22"
+  "job": "22",
+  "content": "20"
 },{
-  "job": "23",
-  "content": "24"
-},{
-  "job": "25",
+  "job": "22",
   "content": "21"
 },{
-  "job": "25",
-  "content": "22"
-},{
-  "job": "26",
-  "content": "24"
-},{
-  "id": "27",
-  "freelancer": "8",
-  "title": "28",
-  "content": "29",
+  "id": "23",
+  "freelancer": "24",
+  "title": "25",
+  "content": "26",
   "price": 30,
   "deliveryTime": 3,
-  "employers": "30"
+  "employers": "27"
 },"A message example","A sample response",{
-  "id": "31",
-  "freelancer": "8",
-  "title": "32",
-  "content": "33",
-  "price": 50,
-  "deliveryTime": 7,
-  "employers": "34"
-},"Another message example",{
-  "id": "27",
-  "freelancer": "8",
-  "title": "28",
-  "content": "29",
+  "id": "23",
+  "freelancer": "28",
+  "title": "25",
+  "content": "26",
   "price": 30,
   "deliveryTime": 3,
-  "employers": "35"
+  "employers": "29"
+},"4af5d8e3-5177-4e17-9787-5fd9f8eb6dec",{
+  "id": "8",
+  "activeRole": "9",
+  "name": "10",
+  "messages": "30",
+  "country": "31",
+  "description": "32",
+  "orders": "33",
+  "specialty": "34",
+  "comments": "35",
+  "rating": 0,
+  "jobs": "36"
+},"Photoshop","Photoshop Master",[
+  "6"
+],{
+  "id": "8",
+  "activeRole": "9",
+  "name": "10",
+  "messages": "11",
+  "country": "31",
+  "description": "32",
+  "orders": "37",
+  "specialty": "38",
+  "comments": "39",
+  "rating": 0,
+  "jobs": "40"
+},[
+  "6"
+],[
+  "15",
+  "16"
+],"Turkey","I created Facebook",[
+  "41",
+  "42"
+],[
+  "43"
+],[],[
+  "25",
+  "44"
+],[
+  "45",
+  "46"
+],[
+  "47"
+],[],[
+  "25",
+  "44"
+],{
+  "id": "48",
+  "employer": "49",
+  "job": "19",
+  "price": 30,
+  "status": "50",
+  "rating": 4,
+  "comment": "51",
+  "date": "52"
 },{
-  "id": "31",
-  "freelancer": "8",
-  "title": "32",
-  "content": "33",
+  "id": "53",
+  "employer": "49",
+  "job": "54",
+  "price": 50,
+  "status": "55",
+  "rating": 2,
+  "comment": "56",
+  "date": "52"
+},{
+  "field": "57",
+  "experience": 10
+},"Wordpress",{
+  "id": "48",
+  "employer": "58",
+  "job": "22",
+  "price": 30,
+  "status": "50",
+  "rating": 4,
+  "comment": "51",
+  "date": "52"
+},{
+  "id": "53",
+  "employer": "58",
+  "job": "59",
+  "price": 50,
+  "status": "55",
+  "rating": 2,
+  "comment": "56",
+  "date": "52"
+},{
+  "field": "57",
+  "experience": 10
+},"5c4d6076-2651-4eee-8f92-b7c873b69bb0",{
+  "id": "4",
+  "activeRole": "9",
+  "name": "6",
+  "messages": "7",
+  "orders": "60"
+},"done","Great job!","2021-01-01T07:07:01.625Z","0c21cfc9-56d4-4c03-8a50-fc0ae42afdd2",{
+  "id": "61",
+  "freelancer": "24",
+  "title": "44",
+  "content": "62",
   "price": 50,
   "deliveryTime": 7,
-  "employers": "36"
-},"3763edfc-0a34-4eee-a575-7a9340723b4f","Photoshop","Photoshop Master",[
+  "employers": "63"
+},"inprogress","Shitty job!","Web Development",{
+  "id": "4",
+  "activeRole": "9",
+  "name": "6",
+  "messages": "64",
+  "orders": "65"
+},{
+  "id": "61",
+  "freelancer": "28",
+  "title": "44",
+  "content": "62",
+  "price": 50,
+  "deliveryTime": 7,
+  "employers": "66"
+},[
+  "41",
+  "42"
+],"03257218-2ccf-4c2d-9634-e204e30a6780","All kind of websites",[
   "6"
-],"1e1b6eed-3fc7-488a-a1e5-4bdcdec85957","Wordpress","All kind of websites",[],[
+],[
+  "17",
+  "18"
+],[
+  "45",
+  "46"
+],[
   "6"
-],[]]
+]]

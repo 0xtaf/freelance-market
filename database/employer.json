@@ -6,111 +6,181 @@
   "id": "4",
   "activeRole": "5",
   "name": "6",
-  "messages": "7",
-  "orders": "8"
+  "messages": "7"
 },{
-  "id": "9",
-  "activeRole": "5",
+  "id": "8",
+  "activeRole": "9",
   "name": "10",
   "messages": "11",
   "orders": "12"
 },{
   "id": "13",
-  "activeRole": "5",
+  "activeRole": "9",
   "name": "14",
   "messages": "15",
   "orders": "16"
-},"40c27b86-e594-4e86-b35b-e4bee90776ee","employer","Leyla",[],[
+},"b73b9f29-dadb-4ed3-bd4a-4ac8bfead7a8","freelancer","Leyla",[
   "17",
-  "18",
+  "18"
+],"3869f001-dd01-44c8-893d-fa01078ab607","employer","Mecnun",[
   "19",
   "20"
-],"53a0ab89-afb3-4939-8d70-b21f5cbe3774","Mecnun",[],[],"9e8f316b-fa5e-4400-86ed-53a8b5790760","Erdal",[],[],{
-  "id": "21",
-  "employer": "22",
-  "job": "23",
-  "price": 30,
-  "status": "24",
-  "rating": 0,
-  "comment": "25",
-  "date": "26"
+],[],"b9f99cad-8f3d-4907-b29e-4c24a4522683","Erdal",[],[],{
+  "job": "21",
+  "content": "22"
 },{
-  "id": "27",
-  "employer": "22",
-  "job": "28",
-  "price": 50,
-  "status": "24",
-  "rating": 0,
-  "comment": "25",
-  "date": "29"
+  "job": "21",
+  "content": "23"
 },{
-  "id": "30",
-  "employer": "31",
-  "job": "32",
-  "price": 50,
-  "status": "24",
-  "rating": 0,
-  "comment": "25",
-  "date": "33"
+  "job": "24",
+  "content": "22"
 },{
-  "id": "34",
-  "employer": "1",
-  "job": "35",
-  "price": 50,
-  "status": "24",
-  "rating": 0,
-  "comment": "25",
-  "date": "36"
-},"a306f903-2d3f-4874-a80d-1a90bb222d15",{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "7",
-  "orders": "8"
+  "job": "24",
+  "content": "23"
 },{
-  "id": "37",
-  "freelancer": "9",
-  "title": "38",
-  "content": "39",
+  "id": "25",
+  "freelancer": "26",
+  "title": "27",
+  "content": "28",
   "price": 30,
   "deliveryTime": 3,
-  "employers": "40"
-},"todo","","2020-12-29T13:45:04.683Z","e6fbb1c7-52a3-4d9b-966e-35a885b61f03",{
-  "id": "41",
-  "freelancer": "9",
-  "title": "42",
-  "content": "43",
-  "price": 50,
-  "deliveryTime": 7,
-  "employers": "44"
-},"2020-12-29T13:45:04.704Z","8602833b-b874-4053-bef7-77ce40d63754",{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "7",
-  "orders": "8"
-},{
-  "id": "41",
-  "freelancer": "9",
-  "title": "42",
-  "content": "43",
-  "price": 50,
-  "deliveryTime": 7,
-  "employers": "45"
-},"2020-12-29T13:46:11.798Z","3b5b1dbf-863d-4233-9978-df45fa61676e",{
-  "id": "41",
-  "freelancer": "9",
-  "title": "42",
-  "content": "43",
-  "price": 50,
-  "deliveryTime": 7,
-  "employers": "46"
-},"2020-12-29T13:46:20.500Z","3763edfc-0a34-4eee-a575-7a9340723b4f","Photoshop","Photoshop Master",[
+  "employers": "29"
+},"A message example","A sample response",{
+  "id": "25",
+  "freelancer": "30",
+  "title": "27",
+  "content": "28",
+  "price": 30,
+  "deliveryTime": 3,
+  "employers": "31"
+},"4af5d8e3-5177-4e17-9787-5fd9f8eb6dec",{
+  "id": "8",
+  "activeRole": "9",
+  "name": "10",
+  "messages": "32",
+  "country": "33",
+  "description": "34",
+  "orders": "35",
+  "specialty": "36",
+  "comments": "37",
+  "rating": 0,
+  "jobs": "38"
+},"Photoshop","Photoshop Master",[
   "6"
-],"1e1b6eed-3fc7-488a-a1e5-4bdcdec85957","Wordpress","All kind of websites",[
+],{
+  "id": "8",
+  "activeRole": "9",
+  "name": "10",
+  "messages": "11",
+  "country": "33",
+  "description": "34",
+  "orders": "39",
+  "specialty": "40",
+  "comments": "41",
+  "rating": 0,
+  "jobs": "42"
+},[
   "6"
 ],[
+  "17",
+  "18"
+],"Turkey","I created Facebook",[
+  "43",
+  "44"
+],[
+  "45"
+],[],[
+  "27",
+  "46"
+],[
+  "47",
+  "48"
+],[
+  "49"
+],[],[
+  "27",
+  "46"
+],{
+  "id": "50",
+  "employer": "51",
+  "job": "21",
+  "price": 30,
+  "status": "52",
+  "rating": 4,
+  "comment": "53",
+  "date": "54"
+},{
+  "id": "55",
+  "employer": "51",
+  "job": "56",
+  "price": 50,
+  "status": "57",
+  "rating": 2,
+  "comment": "58",
+  "date": "54"
+},{
+  "field": "59",
+  "experience": 10
+},"Wordpress",{
+  "id": "50",
+  "employer": "60",
+  "job": "24",
+  "price": 30,
+  "status": "52",
+  "rating": 4,
+  "comment": "53",
+  "date": "54"
+},{
+  "id": "55",
+  "employer": "60",
+  "job": "61",
+  "price": 50,
+  "status": "57",
+  "rating": 2,
+  "comment": "58",
+  "date": "54"
+},{
+  "field": "59",
+  "experience": 10
+},"5c4d6076-2651-4eee-8f92-b7c873b69bb0",{
+  "id": "4",
+  "activeRole": "9",
+  "name": "6",
+  "messages": "7",
+  "orders": "62"
+},"done","Great job!","2021-01-01T07:07:01.625Z","0c21cfc9-56d4-4c03-8a50-fc0ae42afdd2",{
+  "id": "63",
+  "freelancer": "26",
+  "title": "46",
+  "content": "64",
+  "price": 50,
+  "deliveryTime": 7,
+  "employers": "65"
+},"inprogress","Shitty job!","Web Development",{
+  "id": "4",
+  "activeRole": "9",
+  "name": "6",
+  "messages": "66",
+  "orders": "67"
+},{
+  "id": "63",
+  "freelancer": "30",
+  "title": "46",
+  "content": "64",
+  "price": 50,
+  "deliveryTime": 7,
+  "employers": "68"
+},[
+  "43",
+  "44"
+],"03257218-2ccf-4c2d-9634-e204e30a6780","All kind of websites",[
   "6"
+],[
+  "19",
+  "20"
+],[
+  "47",
+  "48"
 ],[
   "6"
 ]]
