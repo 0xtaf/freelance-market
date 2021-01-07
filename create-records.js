@@ -29,6 +29,7 @@ async function main() {
 
 
     await freelancer2.addSpecialty('Web Development', 10)
+    await freelancer2.addSpecialty('Web Security', 3)
     await freelancer2.updateProfile('Turkey', 'I created Facebook')
     
     await freelancer2.finishOrder(order1)
@@ -38,10 +39,10 @@ async function main() {
     user2.sendMessage(user1, job1, 'A sample response')
 
 
-    await employer1.rateAndComment(order1, 4, 'Great job!')
-    await employer1.rateAndComment(order2, 2, 'Shitty job!')
+    await employer1.rateAndComment(job1, 4, 'Great job!')
+    await employer1.rateAndComment(job2, 2, 'Shitty job!')
     
-    
+
     await orderDatabase.update(order1)
     await orderDatabase.update(order2)
     await userDatabase.update(user1)
@@ -52,7 +53,8 @@ async function main() {
     await freelancerDatabase.update(user2)
     await employerDatabase.update(employer1)
     await freelancerDatabase.update(freelancer2)
-
+    await jobDatabase.update(job1)
+    await jobDatabase.update(job2)
 
     const user3 = User.create({ name: 'Erdal' })
     const employer3 = Employer.create(user3)
