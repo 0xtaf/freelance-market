@@ -3,8 +3,6 @@ const { Order } = require('./order')
 const jobDatabase = require('../database/job-database')
 const fs = require('fs')
 
-const path = process.cwd()+'/database/order.json'
-
 class Employer extends User {
   constructor(id, activeRole, name, messages, orders = []){
     super(id, activeRole, name, messages)
