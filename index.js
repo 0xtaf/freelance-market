@@ -9,24 +9,24 @@ async function main(){
     const freelancer1 = await freelancerDatabase.find(user1.id) 
     const freelancer3 = await freelancerDatabase.findByUserName('Erdal')
     
-    const job3 = await freelancer3.createJob({title: 'Translation', content: 'Eng-Tur', price:  100, deliveryTime: 6 })
-    await jobDatabase.insert(job3)
+    // const job3 = await freelancer3.createJob({title: 'Translation', content: 'Eng-Tur', price:  100, deliveryTime: 6 })
+    // await jobDatabase.insert(job3)
 
-    const order3 = await employer1.buy(job3) 
-    await orderDatabase.insert(order3)
-    await employerDatabase.update(employer1)
-    await freelancerDatabase.update(freelancer3)
+    // const order3 = await employer1.buy(job3) 
+    // await orderDatabase.insert(order3)
+    // await employerDatabase.update(employer1)
+    // await freelancerDatabase.update(freelancer3)
 
-    user1.changeRole()
-    employer1.changeRole()
-    freelancer1.changeRole()
+    // user1.changeRole()
+    // employer1.changeRole()
+    // freelancer1.changeRole()
     
-    await userDatabase.update(user1)
-    await employerDatabase.update(employer1)
-    await freelancerDatabase.update(freelancer1)
+    // await userDatabase.update(user1)
+    // await employerDatabase.update(employer1)
+    // await freelancerDatabase.update(freelancer1)
 
+    console.log("Results: ", await jobDatabase.load())
     await searchJob('pho')
-    console.log("Results: ", await freelancerDatabase.load())
   
     printOrderHistory(employer1)
   } catch (e) {
