@@ -1,22 +1,10 @@
 const { User } = require('./user')
 const { Order } = require('./order')
-const jobDatabase = require('../database/job-database')
 
 class Employer extends User {
   constructor(id, activeRole, name, messages, orders = []){
     super(id, activeRole, name, messages)
     this.orders = orders
-  }
-
-  async searchJob(keyword){
-    try {
-      const job = await jobDatabase.findByKeyword(keyword)
-      job.length 
-        ? console.log(`${keyword} için ${job.length} adet ilan bulundu`) 
-        : console.log(`${keyword} için sonuç bulunamadı`)
-    } catch (e) {
-      console.log(e)
-    }
   }
 
   async buy(job) {
