@@ -1,8 +1,6 @@
 const { User } = require('./user')
 const Job = require('./job')
 const { status } = require('./order')
-const orderDatabase = require('../database/order-database')
-
 
 class Freelancer extends User {
   constructor(id, activeRole, name, messages, country = '', description = '', orders = [], specialties = [], comments = [], rating = 0, jobs = []) {
