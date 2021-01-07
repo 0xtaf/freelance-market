@@ -5,12 +5,12 @@ const orderDatabase = require('../database/order-database')
 
 
 class Freelancer extends User {
-  constructor(id, activeRole, name, messages, country = '', description = '', orders = [], specialty = [], comments = [], rating = 0, jobs = []) {
+  constructor(id, activeRole, name, messages, country = '', description = '', orders = [], specialties = [], comments = [], rating = 0, jobs = []) {
     super(id, activeRole, name, messages)
     this.country = country
     this.description = description
     this.orders = orders
-    this.specialty = specialty
+    this.specialties = specialties
     this.comments = comments
     this.rating = rating
     this.jobs = jobs
@@ -18,7 +18,7 @@ class Freelancer extends User {
 
   addSpecialty(field, experience){
     const specialty = { field, experience }
-    this.specialty.push(specialty)
+    this.specialties.push(specialty)
   }
 
   updateProfile(country, description) {
@@ -43,7 +43,7 @@ class Freelancer extends User {
   }
 
   static create(user) {
-    return new Freelancer(user.id, user.activeRole, user.name, user.messages, user.country, user.description, user.orders, user.specialty, user.comments, user.rating, user.jobs)
+    return new Freelancer(user.id, user.activeRole, user.name, user.messages, user.country, user.description, user.orders, user.specialties, user.comments, user.rating, user.jobs)
   }
 }
 
