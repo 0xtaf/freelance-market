@@ -11,7 +11,7 @@ class Employer extends User {
     const order = Order.create({employer: this, job, status: status.TODO})
     this.orders.push(order)
     job.freelancer.orders.push(order)
-    job.employers.push(this.name)
+    job.employers.push(this)
     return order
   }
 
