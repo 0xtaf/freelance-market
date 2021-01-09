@@ -1,5 +1,5 @@
 const { User } = require('./user')
-const { Order } = require('./order')
+const { Order, status } = require('./order')
 
 class Employer extends User {
   constructor(id, activeRole, name, messages, orders = []){
@@ -8,7 +8,7 @@ class Employer extends User {
   }
 
   async buy(job) {
-    const order = Order.create({employer: this, job})
+    const order = Order.create({employer: this, job, status: status.TODO})
     this.orders.push(order)
     job.freelancer.orders.push(order)
     job.employers.push(this.name)
