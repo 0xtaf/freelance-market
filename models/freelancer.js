@@ -15,8 +15,7 @@ class Freelancer extends User {
   }
 
   addSpecialty(field, experience){
-    const specialty = { field, experience }
-    this.specialties.push(specialty)
+    this.specialties.push({ field, experience })
   }
 
   updateProfile(country, description) {
