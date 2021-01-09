@@ -10,7 +10,7 @@ const status = {
 Object.freeze(status);
 
 class Order {
-  constructor(id = uuidv4(), employer, job, status = 'todo', date = new Date()) {
+  constructor(id = uuidv4(), employer, job, status = status.TODO, date = new Date()) {
     this.id = id
     this.employer = employer
     this.job = job
