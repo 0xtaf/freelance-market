@@ -42,7 +42,8 @@ async function main() {
     await employer1.rateAndComment(job1, 4, 'Great job!')
     await employer1.rateAndComment(job2, 2, 'Shitty job!')
     
-
+    await jobDatabase.update(job1)
+    await jobDatabase.update(job2)
     await orderDatabase.update(order1)
     await orderDatabase.update(order2)
     await userDatabase.update(user1)
@@ -53,8 +54,7 @@ async function main() {
     await freelancerDatabase.update(user2)
     await employerDatabase.update(employer1)
     await freelancerDatabase.update(freelancer2)
-    await jobDatabase.update(job1)
-    await jobDatabase.update(job2)
+
 
     const user3 = User.create({ name: 'Erdal' })
     const employer3 = Employer.create(user3)
