@@ -1,0 +1,16 @@
+extends layout
+block content
+  h2 Employer Detail
+  p #{employer.name}
+
+  h3 Employer Information
+
+  <em>Active Role:</em> #{employer.activeRole} 
+  h3 Bought Services:
+
+  if employer.orders.length
+    ol
+      each order in employer.orders
+        li '#{order.job.title}' from #{order.job.freelancer.name}
+  else
+    p This person hasn't get any services yet.
