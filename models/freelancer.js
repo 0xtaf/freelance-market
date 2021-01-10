@@ -46,6 +46,10 @@ class Freelancer extends User {
     if (index == -1) throw new Error('Cannot find job')
     this.jobs.splice(index, 1)
   }
+
+  resetOrder(order){
+    order.status = status.TODO
+  }
   startOrder(order){
     order.status = status.INPROGRESS
   }
