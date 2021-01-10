@@ -1,0 +1,9 @@
+extends layout
+block content
+  h2 Employers
+  p There are #{employers.length} employers in this platform.
+
+  ol
+    each employer in employers
+      li
+        a(href=`/employers/${employer.id}`) #{employer.name}
