@@ -1,0 +1,26 @@
+extends layout
+block content
+  h2 Job Detail
+  p #{job.title}
+
+  h3 Job Information
+
+  <em>Title:</em> #{job.title} 
+  br
+  <em>Content:</em> #{job.content}
+  br
+  <em>Price:</em> #{job.price}
+  br
+  <em>Delivery Time:</em> #{job.deliveryTime}
+  br
+  <em>Freelancer:</em>     
+    a(href=`/freelancers/${job.freelancer.id}`) #{job.freelancer.name}
+  br
+  <em>Rating:</em> 
+    if job.ratingsAndComments.length
+      ul
+        each ratingAndComment in job.ratingsAndComments
+          li Rating: #{ratingAndComment.rating} | Comment: #{ratingAndComment.comment}
+    else
+      p This job doesn't have any comments yet.
+  
