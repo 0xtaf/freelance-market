@@ -1,0 +1,9 @@
+extends layout
+block content
+  h2 Freelancers
+  p There are #{freelancers.length} freelancers in this platform.
+
+  ol
+    each freelancer in freelancers
+      li
+        a(href=`/freelancers/${freelancer.id}`) #{freelancer.name}
