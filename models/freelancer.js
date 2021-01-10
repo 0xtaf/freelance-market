@@ -29,6 +29,17 @@ class Freelancer extends User {
     return job
   }
 
+  async updateJob(jobId, values){
+    const index = this.jobs.findIndex(job => job.id == jobId)
+    if (index == -1) throw new Error('Cannot find job')
+
+    this.jobs[index].title = values.title
+    this.jobs[index].content = values.content
+    this.jobs[index].price = values.price
+    this.jobs[index].deliveryTime = values.deliveryTime
+
+    return this.jobs[index]
+  }
   startOrder(order){
     order.status = status.INPROGRESS
   }
