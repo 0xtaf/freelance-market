@@ -40,6 +40,12 @@ class Freelancer extends User {
 
     return this.jobs[index]
   }
+
+  async removeJob(jobId){
+    const index = this.jobs.findIndex(job => job.id == jobId)
+    if (index == -1) throw new Error('Cannot find job')
+    this.jobs.splice(index, 1)
+  }
   startOrder(order){
     order.status = status.INPROGRESS
   }
