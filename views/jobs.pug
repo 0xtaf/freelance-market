@@ -1,0 +1,9 @@
+extends layout
+block content
+  h2 Jobs
+  p There are #{jobs.length} jobs in this platform.
+
+  ol
+    each job in jobs
+      li
+        a(href=`/jobs/${job.id}`) #{job.title}
