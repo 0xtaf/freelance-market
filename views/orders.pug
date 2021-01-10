@@ -1,0 +1,12 @@
+extends layout
+block content
+  h2 Orders
+  p There are #{orders.length} orders in this platform.
+
+  ol
+    each order in orders
+      li 
+        a(href=`/orders/${order.id}`) #{order.job.title}
+        |     bought by #{order.employer.name} for #{order.price} dollars. Order's status is: #{order.status}
+
+
