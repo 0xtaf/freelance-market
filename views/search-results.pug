@@ -1,0 +1,9 @@
+extends layout
+block content
+  h2 Search Results
+  p #{jobs.length} job(s) has been found related to your search.
+
+  ol
+    each job in jobs
+      li
+        a(href=`/jobs/${job.id}`) #{job.title}
