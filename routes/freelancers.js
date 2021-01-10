@@ -19,7 +19,7 @@ router.post('/:freelancerId/specialty', async (req, res) => {
 
   const { field, experience } = req.body
   freelancer.addSpecialty(field, experience)
-  freelancerDatabase.update(freelancer)
+  await freelancerDatabase.update(freelancer)
   res.send('Added new specialty')
 })
 
@@ -28,8 +28,8 @@ router.post('/:freelancerId', async (req, res) => {
   if (!freelancer) return res.status(404).send('Cannot find freelancer')
 
   const { country, description } = req.body
-  freelancer.updateProfile(country, description)
-  freelancerDatabase.update(freelancer)
+  await freelancer.updateProfile(country, description)
+  await freelancerDatabase.update(freelancer)
   res.send('Updated profile')
 })
 
@@ -38,8 +38,8 @@ router.post('/:freelancerId/jobs', async (req, res) => {
   if (!freelancer) return res.status(404).send('Cannot find freelancer')
   
   const job = await freelancer.createJob(req.body)
-  jobDatabase.insert(job)
-  freelancerDatabase.update(freelancer)
+  await jobDatabase.insert(job)
+  await freelancerDatabase.update(freelancer)
   res.send('Added a new job')
 })
 
@@ -69,7 +69,7 @@ router.post('/:freelancerId/orders/:orderId/status', async (req, res) => {
       break;
     }
     
-  orderDatabase.update(order)
+  await orderDatabase.update(order)
   res.send('Order\'s status has changed')
 })
 
