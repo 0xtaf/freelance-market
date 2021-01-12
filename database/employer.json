@@ -1,806 +1,343 @@
 [[
   "1",
   "2",
-  "3"
+  "3",
+  "4"
 ],{
-  "id": "4",
-  "activeRole": "5",
+  "id": "5",
   "name": "6",
-  "messages": "7",
-  "orders": "8"
+  "orders": "7"
 },{
-  "id": "9",
-  "activeRole": "10",
-  "name": "11",
-  "messages": "12",
+  "id": "8",
+  "name": "9",
+  "orders": "10"
+},{
+  "id": "11",
+  "name": "12",
   "orders": "13"
 },{
   "id": "14",
-  "activeRole": "5",
   "name": "15",
-  "messages": "16",
-  "orders": "17"
-},"735f83ae-0bf4-419a-afd8-4afe4e986208","employer","Leyla",[
+  "orders": "16"
+},"ee9a2362-9297-4065-8dbd-98b4cae2c265","Employer1",[
+  "17",
   "18",
   "19"
-],[
+],"54a64b25-ca4f-41b2-b54a-8f0b3413cf88","Employer2",[],"9453a926-1278-421b-b7b3-b4a7289c2927","Employer3",[],"ae363ff3-e9ca-4b05-b2d1-c6039ba8e0ca","Employer4",[
   "20",
   "21"
-],"a52c2ebb-c0c4-4dd0-9ae1-2331f8d23c3f","freelancer","Mecnun",[
-  "22",
-  "23"
-],[
-  "24",
-  "25",
-  "26"
-],"6ee44187-1b64-4bc3-8398-06ecf67b6af9","Erdal",[],[],{
-  "job": "27",
-  "content": "28"
+],{
+  "id": "22",
+  "employer": "23",
+  "job": "24",
+  "price": 30,
+  "status": "25",
+  "date": "26"
 },{
-  "job": "27",
-  "content": "29"
+  "id": "27",
+  "employer": "23",
+  "job": "28",
+  "price": 50,
+  "status": "29",
+  "date": "26"
 },{
   "id": "30",
   "employer": "31",
-  "job": "27",
-  "price": 30,
-  "status": "32",
-  "date": "33"
+  "job": "32",
+  "price": "33",
+  "status": "34",
+  "date": "35"
 },{
-  "id": "34",
-  "employer": "31",
-  "job": "35",
-  "price": 50,
-  "status": "36",
-  "date": "33"
+  "id": "36",
+  "employer": "37",
+  "job": "38",
+  "price": "39",
+  "status": "34",
+  "date": "40"
 },{
-  "job": "37",
-  "content": "28"
+  "id": "41",
+  "employer": "42",
+  "job": "43",
+  "price": "39",
+  "status": "34",
+  "date": "44"
+},"aad9d2f4-b080-450b-a49b-b01165f2015f",{
+  "id": "5",
+  "name": "6",
+  "orders": "7"
 },{
-  "job": "37",
-  "content": "29"
-},{
-  "id": "38",
-  "employer": "39",
-  "job": "40",
-  "price": "41",
-  "status": "42",
-  "date": "43"
-},{
-  "id": "44",
-  "employer": "45",
-  "job": "46",
-  "price": "47",
-  "status": "42",
-  "date": "48"
-},{
-  "id": "49",
-  "employer": "2",
-  "job": "50",
-  "price": "47",
-  "status": "42",
-  "date": "51"
-},{
-  "id": "52",
-  "freelancer": "53",
-  "title": "54",
-  "content": "55",
+  "id": "45",
+  "freelancer": "46",
+  "title": "47",
+  "content": "48",
   "price": 30,
   "deliveryTime": 3,
-  "ratingsAndComments": "56",
-  "employers": "57"
-},"A message example","A sample response","76af3f62-697a-4037-a185-fbcab8d6c470",{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "7",
-  "orders": "8"
-},"done","2021-01-10T05:06:31.245Z","d629b7e0-e1b5-4ac8-a5aa-9012ec3919c7",{
-  "id": "58",
-  "freelancer": "53",
-  "title": "59",
-  "content": "60",
+  "ratingsAndComments": "49",
+  "employers": "50"
+},"done","2021-01-12T03:58:00.218Z","870161f0-322a-4d62-9caf-5c6e05bb563c",{
+  "id": "51",
+  "freelancer": "46",
+  "title": "52",
+  "content": "53",
   "price": 50,
   "deliveryTime": 7,
+  "ratingsAndComments": "54",
+  "employers": "55"
+},"inprogress","13365a27-1329-40b8-b313-2a95154f74db",{
+  "id": "5",
+  "name": "6",
+  "orders": "7"
+},{
+  "id": "56",
+  "freelancer": "57",
+  "title": "58",
+  "content": "59",
+  "price": "33",
+  "deliveryTime": "60",
   "ratingsAndComments": "61",
   "employers": "62"
-},"inprogress",{
-  "id": "52",
-  "freelancer": "63",
-  "title": "54",
-  "content": "55",
-  "price": 30,
-  "deliveryTime": 3,
-  "ratingsAndComments": "64",
-  "employers": "65"
-},"543ee6bc-1e48-4020-b33c-13aae77f5303",{
-  "id": "9",
-  "activeRole": "10",
-  "name": "11",
-  "messages": "12",
-  "orders": "13"
+},"220 tl/h","todo","2021-01-12T04:29:06.732Z","ca01e0b1-e363-4419-af70-f5c261121602",{
+  "id": "14",
+  "name": "15",
+  "orders": "16"
 },{
-  "id": "66",
-  "freelancer": "67",
-  "title": "68",
-  "content": "69",
-  "price": "41",
-  "deliveryTime": "70",
+  "id": "63",
+  "freelancer": "64",
+  "title": "65",
+  "content": "66",
+  "price": "39",
+  "deliveryTime": "67",
+  "ratingsAndComments": "68",
+  "employers": "69"
+},"220 f3","2021-01-12T04:28:09.005Z","092bd9aa-c239-4f66-8c7a-f9c39863a24f",{
+  "id": "14",
+  "name": "15",
+  "orders": "16"
+},{
+  "id": "63",
+  "freelancer": "70",
+  "title": "65",
+  "content": "66",
+  "price": "39",
+  "deliveryTime": "67",
   "ratingsAndComments": "71",
   "employers": "72"
-},"220 tl/h","todo","2021-01-10T05:36:44.878Z","f44d6cd9-8d5d-4e51-bccc-214fdc280daf",{
-  "id": "9",
-  "activeRole": "10",
-  "name": "11",
-  "messages": "12",
-  "orders": "13"
-},{
-  "id": "66",
-  "freelancer": "73",
-  "title": "74",
-  "content": "69",
-  "price": "47",
-  "deliveryTime": "75",
-  "ratingsAndComments": "76",
-  "employers": "77"
-},"21110 tl/h","2021-01-10T05:50:26.585Z","e414cc4a-7245-427f-950b-2e756220045f",{
-  "id": "66",
-  "freelancer": "78",
-  "title": "74",
-  "content": "69",
-  "price": "47",
-  "deliveryTime": "75",
-  "ratingsAndComments": "79",
-  "employers": "80"
-},"2021-01-10T05:50:52.782Z","2e59bf4c-65b4-4af7-b176-4737da806b3d",{
-  "id": "9",
-  "activeRole": "5",
-  "name": "11",
-  "messages": "81",
-  "country": "82",
-  "description": "83",
-  "orders": "84",
-  "specialties": "85",
-  "comments": "86",
+},"2021-01-12T04:28:19.751Z","527f81ea-bed3-455d-af01-83d720ed9796",{
+  "id": "73",
+  "name": "74",
+  "country": "75",
+  "description": "76",
+  "orders": "77",
+  "specialties": "78",
+  "comments": "79",
   "rating": 0,
-  "jobs": "87"
+  "jobs": "80"
 },"Photoshop","Photoshop Master",[
-  "88"
+  "81"
 ],[
-  "31"
-],"19ec34cd-8f3a-4e92-a4b8-4493f6c61445","Wordpress","All kind of websites",[
-  "89"
+  "23"
+],"5d3dca2d-a6f6-412f-9fea-876342f294a5","Wordpress","All kind of websites",[
+  "82"
 ],[
+  "23"
+],"8feb3e52-9762-4204-9db2-fc7fdfcb3a75",{
+  "id": "73",
+  "name": "74",
+  "country": "75",
+  "description": "76",
+  "orders": "83",
+  "specialties": "84",
+  "comments": "85",
+  "rating": 0,
+  "jobs": "86"
+},"f2nin işi","asdsd de böyledir","32hafta",[],[
   "31"
-],{
-  "id": "9",
-  "activeRole": "5",
-  "name": "11",
-  "messages": "12",
-  "country": "82",
-  "description": "83",
+],"ce63cbfc-4247-40e6-8ea2-09f2d722b81e",{
+  "id": "87",
+  "name": "88",
+  "country": "89",
+  "description": "89",
   "orders": "90",
   "specialties": "91",
   "comments": "92",
   "rating": 0,
   "jobs": "93"
-},[
-  "94"
-],[
-  "95"
-],"d78496fa-202f-4109-82fe-b6994675f414",{
-  "id": "14",
-  "activeRole": "5",
-  "name": "15",
-  "messages": "96",
-  "country": "97",
-  "description": "98",
-  "orders": "99",
-  "specialties": "100",
-  "comments": "101",
-  "rating": 0,
-  "jobs": "102"
-},"job title","asdsd de böyledir","32hafta",[],[
-  "39"
+},"f3 işi","f3 böyledir","f3 hafta",[],[
+  "37"
 ],{
-  "id": "14",
-  "activeRole": "5",
-  "name": "15",
-  "messages": "103",
-  "country": "97",
-  "description": "98",
-  "orders": "104",
-  "specialties": "105",
-  "comments": "106",
+  "id": "87",
+  "name": "88",
+  "country": "89",
+  "description": "89",
+  "orders": "94",
+  "specialties": "95",
+  "comments": "96",
   "rating": 0,
-  "jobs": "107"
-},"job title8","3gün",[],[
-  "108",
-  "45"
-],{
-  "id": "14",
-  "activeRole": "5",
-  "name": "15",
-  "messages": "109",
-  "country": "97",
-  "description": "98",
-  "orders": "110",
-  "specialties": "111",
-  "comments": "112",
-  "rating": 0,
-  "jobs": "113"
+  "jobs": "97"
 },[],[
-  "114",
-  "115",
-  "2"
+  "98",
+  "42"
+],"d6b81ede-64a5-4194-a82e-d684358c7d04","Freelancer2","Turkey","I created Facebook",[
+  "17",
+  "18"
 ],[
-  "18",
-  "19"
-],"Turkey","I created Facebook",[
-  "20",
-  "21"
-],[
-  "116",
-  "117"
+  "99",
+  "100"
 ],[],[
-  "27",
-  "35"
+  "24",
+  "28"
 ],{
   "rating": 4,
-  "comment": "118"
+  "comment": "101"
 },{
   "rating": 2,
-  "comment": "119"
+  "comment": "102"
 },[
-  "120",
-  "121"
+  "103",
+  "104",
+  "19"
 ],[
-  "122",
-  "123"
+  "105",
+  "106",
+  "107"
 ],[],[
-  "37",
-  "124"
+  "108",
+  "109",
+  "110"
+],"d73a78a0-dc45-45a5-9c57-730fdb2bbe38","Freelancer3","",[
+  "20"
+],[],[],[
+  "111"
+],[
+  "112",
+  "21"
+],[],[],[
+  "113"
 ],{
-  "rating": 4,
-  "comment": "118"
+  "id": "14",
+  "name": "15",
+  "orders": "114"
 },{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "125",
-  "orders": "126"
-},[],"turkey","too much experienced",[
-  "24"
-],[
-  "127",
-  "128",
-  "129"
-],[],[
-  "130"
-],[],[
-  "131",
-  "25"
-],[
-  "132",
-  "133",
-  "134"
-],[],[
-  "135"
-],{
-  "id": "9",
-  "activeRole": "10",
-  "name": "11",
-  "messages": "136",
-  "orders": "137"
-},[],[
-  "138",
-  "139",
-  "26"
-],[
-  "140",
-  "141",
-  "142"
-],[],[
-  "143"
-],{
-  "id": "9",
-  "activeRole": "10",
-  "name": "11",
-  "messages": "144",
-  "orders": "145"
-},{
-  "id": "9",
-  "activeRole": "10",
-  "name": "11",
-  "messages": "146",
-  "orders": "147"
-},{
-  "field": "148",
+  "field": "115",
   "experience": 10
 },{
-  "field": "149",
+  "field": "116",
   "experience": 3
 },"Great job!","Shitty job!",{
-  "id": "30",
-  "employer": "95",
-  "job": "37",
+  "id": "22",
+  "employer": "117",
+  "job": "108",
   "price": 30,
-  "status": "32",
-  "date": "33"
+  "status": "25",
+  "date": "26"
 },{
-  "id": "34",
-  "employer": "95",
-  "job": "124",
+  "id": "27",
+  "employer": "117",
+  "job": "109",
   "price": 50,
-  "status": "36",
-  "date": "33"
+  "status": "29",
+  "date": "26"
 },{
-  "field": "148",
+  "field": "115",
   "experience": 10
 },{
-  "field": "149",
+  "field": "116",
   "experience": 3
 },{
-  "id": "58",
-  "freelancer": "63",
-  "title": "59",
-  "content": "60",
+  "field": "118",
+  "experience": "119"
+},{
+  "id": "45",
+  "freelancer": "120",
+  "title": "47",
+  "content": "48",
+  "price": 30,
+  "deliveryTime": 3,
+  "ratingsAndComments": "121",
+  "employers": "122"
+},{
+  "id": "51",
+  "freelancer": "120",
+  "title": "52",
+  "content": "53",
   "price": 50,
   "deliveryTime": 7,
-  "ratingsAndComments": "150",
-  "employers": "151"
-},[
-  "22",
-  "23"
-],[
-  "120",
-  "121"
-],{
-  "field": "152",
-  "experience": "153"
+  "ratingsAndComments": "123",
+  "employers": "124"
 },{
-  "field": "154",
-  "experience": "153"
-},{},{
-  "id": "66",
-  "freelancer": "67",
-  "title": "68",
-  "content": "69",
-  "price": "41",
-  "deliveryTime": "70",
+  "id": "56",
+  "freelancer": "57",
+  "title": "58",
+  "content": "59",
+  "price": "33",
+  "deliveryTime": "60",
+  "ratingsAndComments": "61",
+  "employers": "62"
+},{
+  "id": "63",
+  "freelancer": "64",
+  "title": "65",
+  "content": "66",
+  "price": "39",
+  "deliveryTime": "67",
+  "ratingsAndComments": "68",
+  "employers": "69"
+},{
+  "id": "36",
+  "employer": "98",
+  "job": "125",
+  "price": "39",
+  "status": "34",
+  "date": "40"
+},{
+  "id": "63",
+  "freelancer": "70",
+  "title": "65",
+  "content": "66",
+  "price": "39",
+  "deliveryTime": "67",
   "ratingsAndComments": "71",
   "employers": "72"
-},{
-  "id": "38",
-  "employer": "108",
-  "job": "155",
-  "price": "41",
-  "status": "42",
-  "date": "43"
-},{
-  "field": "152",
-  "experience": "153"
-},{
-  "field": "154",
-  "experience": "153"
-},{},{
-  "id": "66",
-  "freelancer": "73",
-  "title": "74",
-  "content": "69",
-  "price": "47",
-  "deliveryTime": "75",
-  "ratingsAndComments": "76",
-  "employers": "77"
 },[
-  "156",
-  "157"
-],[
-  "131"
-],{
-  "id": "38",
-  "employer": "114",
-  "job": "158",
-  "price": "41",
-  "status": "42",
-  "date": "43"
-},{
-  "id": "44",
-  "employer": "115",
-  "job": "159",
-  "price": "47",
-  "status": "42",
-  "date": "48"
-},{
-  "field": "152",
-  "experience": "153"
-},{
-  "field": "154",
-  "experience": "153"
-},{},{
-  "id": "66",
-  "freelancer": "78",
-  "title": "74",
-  "content": "69",
-  "price": "47",
-  "deliveryTime": "75",
-  "ratingsAndComments": "79",
-  "employers": "80"
-},[
-  "160",
-  "161"
-],[
-  "138"
-],[
-  "162",
-  "163"
-],[
-  "164",
-  "139"
-],"Web Development","Web Security",[
-  "165"
-],[
-  "95"
-],"3d design","1 month","4d design",{
-  "id": "66",
-  "freelancer": "73",
-  "title": "68",
-  "content": "69",
-  "price": "41",
-  "deliveryTime": "70",
-  "ratingsAndComments": "76",
-  "employers": "77"
-},{
-  "job": "166",
-  "content": "28"
-},{
-  "job": "166",
-  "content": "29"
-},{
-  "id": "66",
-  "freelancer": "78",
-  "title": "68",
-  "content": "69",
-  "price": "41",
-  "deliveryTime": "70",
-  "ratingsAndComments": "79",
-  "employers": "80"
-},{
-  "id": "66",
-  "freelancer": "78",
-  "title": "74",
-  "content": "69",
-  "price": "47",
-  "deliveryTime": "75",
-  "ratingsAndComments": "79",
-  "employers": "80"
-},{
-  "job": "167",
-  "content": "28"
-},{
-  "job": "167",
-  "content": "29"
-},{
-  "job": "168",
-  "content": "28"
-},{
-  "job": "168",
-  "content": "29"
-},{
-  "id": "38",
-  "employer": "169",
-  "job": "170",
-  "price": "41",
-  "status": "42",
-  "date": "43"
-},{
-  "rating": 2,
-  "comment": "119"
-},{
-  "id": "52",
-  "freelancer": "171",
-  "title": "54",
-  "content": "55",
-  "price": 30,
-  "deliveryTime": 3,
-  "ratingsAndComments": "172",
-  "employers": "173"
-},{
-  "id": "52",
-  "freelancer": "174",
-  "title": "54",
-  "content": "55",
-  "price": 30,
-  "deliveryTime": 3,
-  "ratingsAndComments": "175",
-  "employers": "176"
-},{
-  "id": "52",
-  "freelancer": "177",
-  "title": "54",
-  "content": "55",
-  "price": 30,
-  "deliveryTime": 3,
-  "ratingsAndComments": "178",
-  "employers": "179"
-},{
-  "id": "9",
-  "activeRole": "10",
-  "name": "11",
-  "messages": "146",
-  "orders": "147"
-},{
-  "id": "66",
-  "freelancer": "180",
-  "title": "68",
-  "content": "69",
-  "price": "41",
-  "deliveryTime": "70",
-  "ratingsAndComments": "181",
-  "employers": "182"
-},{
-  "id": "9",
-  "activeRole": "5",
-  "name": "11",
-  "messages": "136",
-  "country": "82",
-  "description": "83",
-  "orders": "183",
-  "specialties": "184",
-  "comments": "185",
+  "112"
+],"Web Development","Web Security",{
+  "id": "5",
+  "name": "6",
+  "orders": "126"
+},"3d design","1 month",{
+  "id": "73",
+  "name": "74",
+  "country": "75",
+  "description": "76",
+  "orders": "83",
+  "specialties": "84",
+  "comments": "85",
   "rating": 0,
-  "jobs": "186"
+  "jobs": "86"
 },[
-  "187"
+  "127"
 ],[
-  "188"
+  "117"
+],[
+  "128"
+],[
+  "117"
 ],{
-  "id": "9",
-  "activeRole": "5",
-  "name": "11",
-  "messages": "144",
-  "country": "82",
-  "description": "83",
-  "orders": "189",
-  "specialties": "190",
-  "comments": "191",
-  "rating": 0,
-  "jobs": "192"
+  "id": "63",
+  "freelancer": "70",
+  "title": "65",
+  "content": "66",
+  "price": "39",
+  "deliveryTime": "67",
+  "ratingsAndComments": "71",
+  "employers": "72"
 },[
-  "193"
-],[
-  "194"
-],{
-  "id": "9",
-  "activeRole": "5",
-  "name": "11",
-  "messages": "146",
-  "country": "82",
-  "description": "83",
-  "orders": "195",
-  "specialties": "196",
-  "comments": "197",
-  "rating": 0,
-  "jobs": "198"
-},[
-  "199"
-],[
-  "200"
-],{
-  "id": "14",
-  "activeRole": "5",
-  "name": "15",
-  "messages": "201",
-  "country": "97",
-  "description": "98",
-  "orders": "202",
-  "specialties": "203",
-  "comments": "204",
-  "rating": 0,
-  "jobs": "205"
-},[],[
-  "169"
-],[
-  "206",
-  "207"
-],[
-  "208",
-  "209"
-],[],[
-  "166",
-  "210"
+  "103",
+  "104"
 ],{
   "rating": 4,
-  "comment": "118"
-},{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "211",
-  "orders": "212"
-},[
-  "213",
-  "214"
-],[
-  "215",
-  "216"
-],[],[
-  "167",
-  "217"
-],{
-  "rating": 4,
-  "comment": "118"
-},{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "218",
-  "orders": "219"
-},[
-  "220",
-  "221"
-],[
-  "222",
-  "223"
-],[],[
-  "168",
-  "224"
-],{
-  "rating": 4,
-  "comment": "118"
-},{
-  "id": "4",
-  "activeRole": "5",
-  "name": "6",
-  "messages": "225",
-  "orders": "226"
-},[],[
-  "164"
-],[
-  "227",
-  "228",
-  "229"
-],[],[
-  "230"
-],{
-  "id": "30",
-  "employer": "188",
-  "job": "166",
-  "price": 30,
-  "status": "32",
-  "date": "33"
-},{
-  "id": "34",
-  "employer": "188",
-  "job": "210",
-  "price": 50,
-  "status": "36",
-  "date": "33"
-},{
-  "field": "148",
-  "experience": 10
-},{
-  "field": "149",
-  "experience": 3
-},{
-  "id": "58",
-  "freelancer": "171",
-  "title": "59",
-  "content": "60",
-  "price": 50,
-  "deliveryTime": 7,
-  "ratingsAndComments": "231",
-  "employers": "232"
-},[
-  "156",
-  "157"
-],[
-  "206",
-  "207"
-],{
-  "id": "30",
-  "employer": "194",
-  "job": "167",
-  "price": 30,
-  "status": "32",
-  "date": "33"
-},{
-  "id": "34",
-  "employer": "194",
-  "job": "217",
-  "price": 50,
-  "status": "36",
-  "date": "33"
-},{
-  "field": "148",
-  "experience": 10
-},{
-  "field": "149",
-  "experience": 3
-},{
-  "id": "58",
-  "freelancer": "174",
-  "title": "59",
-  "content": "60",
-  "price": 50,
-  "deliveryTime": 7,
-  "ratingsAndComments": "233",
-  "employers": "234"
-},[
-  "160",
-  "161"
-],[
-  "213",
-  "214"
-],{
-  "id": "30",
-  "employer": "200",
-  "job": "168",
-  "price": 30,
-  "status": "32",
-  "date": "33"
-},{
-  "id": "34",
-  "employer": "200",
-  "job": "224",
-  "price": 50,
-  "status": "36",
-  "date": "33"
-},{
-  "field": "148",
-  "experience": 10
-},{
-  "field": "149",
-  "experience": 3
-},{
-  "id": "58",
-  "freelancer": "177",
-  "title": "59",
-  "content": "60",
-  "price": 50,
-  "deliveryTime": 7,
-  "ratingsAndComments": "235",
-  "employers": "236"
-},[
-  "162",
-  "163"
-],[
-  "220",
-  "221"
-],{
-  "field": "152",
-  "experience": "153"
-},{
-  "field": "154",
-  "experience": "153"
-},{},{
-  "id": "66",
-  "freelancer": "180",
-  "title": "68",
-  "content": "69",
-  "price": "41",
-  "deliveryTime": "70",
-  "ratingsAndComments": "181",
-  "employers": "182"
-},[
-  "237"
-],[
-  "188"
-],[
-  "238"
-],[
-  "194"
-],[
-  "239"
-],[
-  "200"
-],{
-  "rating": 2,
-  "comment": "119"
+  "comment": "101"
 },{
   "rating": 2,
-  "comment": "119"
-},{
-  "rating": 2,
-  "comment": "119"
+  "comment": "102"
 }]

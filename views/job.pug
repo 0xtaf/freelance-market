@@ -1,11 +1,12 @@
 extends layout
 block content
+  a(href='/') Main Page
   h2 Job Detail
   p #{job.title}
 
   h3 Job Information
 
-  <em>Title:</em> #{job.title} 
+  <em>Title:</em> #{job.title}
   br
   <em>Content:</em> #{job.content}
   br
@@ -13,14 +14,13 @@ block content
   br
   <em>Delivery Time:</em> #{job.deliveryTime}
   br
-  <em>Freelancer:</em>     
+  <em>Freelancer: </em>
     a(href=`/freelancers/${job.freelancer.id}`) #{job.freelancer.name}
   br
-  <em>Rating:</em> 
+  <em>Rating:</em>
     if job.ratingsAndComments.length
       ul
         each ratingAndComment in job.ratingsAndComments
           li Rating: #{ratingAndComment.rating} | Comment: #{ratingAndComment.comment}
     else
       p This job doesn't have any comments yet.
-  

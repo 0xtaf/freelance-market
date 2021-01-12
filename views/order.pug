@@ -1,13 +1,13 @@
 extends layout
 block content
+  a(href='/') Main Page
   h2 Order Detail
   p #{order.job.title}
 
   h3 Order Information
 
-  <em>Price:</em> #{order.price} 
+  <em>Price:</em> #{order.price}
   br
   <em>Status:</em> #{order.status}
   br
   <em>Date:</em> #{order.date}
-
