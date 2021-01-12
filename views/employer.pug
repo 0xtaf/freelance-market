@@ -1,11 +1,12 @@
 extends layout
+
 block content
+  a(href='/') Main Page
   h2 Employer Detail
   p #{employer.name}
 
   h3 Employer Information
 
-  <em>Active Role:</em> #{employer.activeRole} 
   h3 Bought Services:
 
   if employer.orders.length

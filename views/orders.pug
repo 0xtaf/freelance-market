@@ -1,12 +1,14 @@
 extends layout
 block content
+  a(href='/') Main Page
   h2 Orders
   p There are #{orders.length} orders in this platform.
 
   ol
     each order in orders
-      li 
+      li
         a(href=`/orders/${order.id}`) #{order.job.title}
+        |     from
+        |
+        a(href=`/freelancers/${order.job.freelancer.id}`) #{order.job.freelancer.name}
         |     bought by #{order.employer.name} for #{order.price} dollars. Order's status is: #{order.status}
-
-

@@ -1,5 +1,6 @@
 extends layout
 block content
+  a(href='/') Main Page
   h2 Freelancer Detail
   p #{freelancer.name}
 
@@ -7,7 +8,7 @@ block content
 
   p Country: #{freelancer.country}
   p Bio: #{freelancer.description}
-  
+
   h3 Specialties:
 
   if freelancer.specialties.length
@@ -22,7 +23,7 @@ block content
   if freelancer.jobs.length
     ol
       each job in freelancer.jobs
-        li 
+        li
           a(href=`/jobs/${job.id}`) #{job.title}
   else
     p This person doesn't have any jobs yet.
