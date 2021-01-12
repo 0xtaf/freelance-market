@@ -1,10 +1,11 @@
-const { User } = require('./user')
 const Job = require('./job')
+const { v4: uuidv4 } = require('uuid');
 const { status } = require('./order')
 
-class Freelancer extends User {
-  constructor(id, activeRole, name, messages, country = '', description = '', orders = [], specialties = [], comments = [], rating = 0, jobs = []) {
-    super(id, activeRole, name, messages)
+class Freelancer {
+  constructor(id = uuidv4(), name, country = '', description = '', orders = [], specialties = [], comments = [], rating = 0, jobs = []) {
+    this.id = id
+    this.name = name
     this.country = country
     this.description = description
     this.orders = orders
@@ -60,8 +61,8 @@ class Freelancer extends User {
     order.status = status.CANCELED
   }
 
-  static create(user) {
-    return new Freelancer(user.id, user.activeRole, user.name, user.messages, user.country, user.description, user.orders, user.specialties, user.comments, user.rating, user.jobs)
+  static create({id, name, country, description, orders, specialties, comments, rating, jobs}) {
+    return new Freelancer(id, name, country, description, orders, specialties, comments, rating, jobs)
   }
 }
 

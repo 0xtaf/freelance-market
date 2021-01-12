@@ -1,9 +1,10 @@
-const { User } = require('./user')
 const { Order, status } = require('./order')
+const { v4: uuidv4 } = require('uuid');
 
-class Employer extends User {
-  constructor(id, activeRole, name, messages, orders = []){
-    super(id, activeRole, name, messages)
+class Employer {
+  constructor(id = uuidv4(), name, orders = []){
+    this.id = id
+    this.name = name
     this.orders = orders
   }
 
@@ -19,8 +20,8 @@ class Employer extends User {
     job.ratingsAndComments.push({rating, comment})
   }
 
-  static create(user) {
-    return new Employer(user.id, user.activeRole, user.name, user.messages, user.orders)
+  static create({id, name, orders}) {
+    return new Employer(id, name, orders)
   }
 }
 
