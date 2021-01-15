@@ -28,19 +28,18 @@ router.post('/:employerId/jobs/:jobId', async (req, res) => {
   await employerDatabase.update(employer)
   await freelancerDatabase.update(job.freelancer)
 
-  res.send('Order has been created.')
+  res.send(order)
 })
 
 router.post('/:employerId/jobs/:jobId/comments', async (req, res) => {
   const employer = await employerDatabase.find(req.params.employerId)
   const job = await jobDatabase.find(req.params.jobId)
 
-  const { rating, comment } = req.body
-  await employer.rateAndComment(job, rating, comment)
-
+  const { text, rating } = req.body
+  const comment = await employer.comment(job, text, rating)
   await jobDatabase.update(job)
 
-  res.send(`Comment has been sent successfully: rating: ${rating}, comment: ${comment} `)
+  res.send(comment)
 })
 
 router.delete('/:employerId', async (req, res) => {
