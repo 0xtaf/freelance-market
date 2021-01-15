@@ -16,8 +16,10 @@ class Employer {
     return order
   }
 
-  async rateAndComment(job, rating, comment) {
-    job.ratingsAndComments.push({rating, comment})
+  async comment(job, text, rating) {
+    const comment = {text, rating}
+    job.comments.push(comment)
+    return comment
   }
 
   static create({id, name, orders}) {
