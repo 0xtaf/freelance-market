@@ -23,9 +23,10 @@ router.post('/:freelancerId/specialty', async (req, res) => {
   if (!freelancer) return res.status(404).send('Cannot find freelancer')
 
   const { field, experience } = req.body
-  freelancer.addSpecialty(field, experience)
+  const specialty = freelancer.addSpecialty(field, experience)
   await freelancerDatabase.update(freelancer)
-  res.send('Added new specialty')
+
+  res.send(specialty)
 })
 
 router.post('/:freelancerId', async (req, res) => {
@@ -33,9 +34,9 @@ router.post('/:freelancerId', async (req, res) => {
   if (!freelancer) return res.status(404).send('Cannot find freelancer')
 
   const { country, description } = req.body
-  await freelancer.updateProfile(country, description)
+  const profile = await freelancer.updateProfile(country, description)
   await freelancerDatabase.update(freelancer)
-  res.send('Updated profile')
+  res.send(profile)
 })
 
 router.post('/:freelancerId/jobs', async (req, res) => {
@@ -48,34 +49,34 @@ router.post('/:freelancerId/jobs', async (req, res) => {
   res.send('Added a new job')
 })
 
-
 router.post('/:freelancerId/orders/:orderId/status', async (req, res) => {
   const freelancer = await freelancerDatabase.find(req.params.freelancerId)
   if (!freelancer) return res.status(404).send('Cannot find freelancer')
   const order = await orderDatabase.find(req.params.orderId)
   if (!order) return res.status(404).send('Cannot find order')
   const { status } = req.body
+  let result
 
   switch (status) {
     case 0:
-      freelancer.resetOrder(order)
-      break;
+      result = freelancer.resetOrder(order)
+      break
     case 1:
-      freelancer.startOrder(order)
-      break;
+      result = freelancer.startOrder(order)
+      break
     case 2:
-      freelancer.finishOrder(order)
-      break;
+      result = freelancer.finishOrder(order)
+      break
     case 3:
-      freelancer.cancelOrder(order)
-      break;
+      result = freelancer.cancelOrder(order)
+      break
     default:
       res.send('Error')
-      break;
-    }
+      break
+  }
 
   await orderDatabase.update(order)
-  res.send('Order\'s status has changed')
+  res.send(result)
 })
 
 router.delete('/:freelancerId', async (req, res) => {
@@ -88,11 +89,11 @@ router.delete('/:freelancerId/jobs/:jobId', async (req, res) => {
   const freelancer = await freelancerDatabase.find(req.params.freelancerId)
   if (!freelancer) return res.status(404).send('Cannot find freelancer')
 
-  await freelancer.removeJob(req.params.jobId)
+  const result = await freelancer.removeJob(req.params.jobId)
   await freelancerDatabase.update(freelancer)
   await jobDatabase.removeBy('id', req.params.jobId)
 
-  res.send('OK')
+  res.send(result)
 })
 
 router.put('/:freelancerId/jobs/:jobId', async (req, res) => {
@@ -103,7 +104,6 @@ router.put('/:freelancerId/jobs/:jobId', async (req, res) => {
   await jobDatabase.update(job)
   await freelancerDatabase.update(freelancer)
   res.send('Updated the job')
-
 })
 
 module.exports = router
