@@ -30,8 +30,8 @@ async function main() {
     await freelancer2.finishOrder(order1)
     await freelancer2.startOrder(order2)
 
-    await employer1.rateAndComment(job1, 4, 'Great job!')
-    await employer1.rateAndComment(job2, 2, 'Shitty job!')
+    await employer1.comment(job1, 'Great job!', 4)
+    await employer1.comment(job2, 'Shitty job!', 2)
 
     await jobDatabase.update(job1)
     await jobDatabase.update(job2)
