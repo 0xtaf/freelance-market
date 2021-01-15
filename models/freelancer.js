@@ -58,7 +58,7 @@ class Freelancer {
     return order.status
   }
   startOrder(order){
-    order.status = status.INPROGRES
+    order.status = status.INPROGRESS
     return order.status
   }
   finishOrder(order){
