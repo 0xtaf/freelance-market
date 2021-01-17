@@ -24,7 +24,7 @@ block content
     ol
       each job in freelancer.jobs
         li
-          a(href=`/jobs/${job.id}`) #{job.title}
+          a(href=`/jobs/${job._id}`) #{job.title}
   else
     p This person doesn't have any jobs yet.
 
@@ -33,6 +33,6 @@ block content
   if freelancer.orders.length
     ol
       each order in freelancer.orders
-        li '#{order.job.title}'
+        li #{order.job.title}
   else
     p This person hasn't sold any jobs yet.

@@ -7,8 +7,8 @@ block content
   ol
     each order in orders
       li
-        a(href=`/orders/${order.id}`) #{order.job.title}
+        a(href=`/orders/${order._id}`) #{order.job.title}
         |     from
         |
-        a(href=`/freelancers/${order.job.freelancer.id}`) #{order.job.freelancer.name}
+        a(href=`/freelancers/${order.job.freelancer._id}`) #{order.job.freelancer.name}
         |     bought by #{order.employer.name} for #{order.price} dollars. Order's status is: #{order.status}
