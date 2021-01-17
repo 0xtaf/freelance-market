@@ -4,6 +4,7 @@ const employersRouter = require('./routes/employers')
 const freelancersRouter = require('./routes/freelancers')
 const ordersRouter = require('./routes/orders')
 const jobsRouter = require('./routes/jobs')
+require('./mongo-connection')
 
 const app = express()
 
