@@ -1,4 +1,4 @@
-const { jobDatabase } = require('../database')
+const { jobService } = require('../services')
 const router = require('express').Router()
 
 router.get('/', (req, res) => {
@@ -8,18 +8,9 @@ router.get('/', (req, res) => {
 router.get('/search/:keyword', async (req, res) => {
   const { keyword } = req.params
 
-  try {
-    const jobs = await jobDatabase.findByKeyword(keyword)
-    if (typeof jobs == 'string') {
-      console.log(jobs)
-    } else {
-      console.log(`${keyword} için ${jobs.length} adet ilan bulundu`)
-    }
-    res.render('search-results', { jobs })
-  } catch (e) {
-    console.log(e)
-  }
-  
+  const jobs = await jobService.findByKeyword(keyword)
+
+  res.render('search-results', { jobs })
 })
 
 module.exports = router

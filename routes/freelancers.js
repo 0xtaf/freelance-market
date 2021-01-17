@@ -1,109 +1,86 @@
-const { freelancerDatabase, jobDatabase, orderDatabase } = require('../database')
+const { freelancerService } = require('../services')
 const router = require('express').Router()
 
 router.get('/', async (req, res) => {
-  const freelancers = await freelancerDatabase.load()
+  const freelancers = await freelancerService.load()
 
   res.render('freelancers', { freelancers })
 })
 
 router.get('/:freelancerId', async (req, res) => {
-  const freelancer = await freelancerDatabase.find(req.params.freelancerId)
+  const freelancer = await freelancerService.find(req.params.freelancerId)
   if (!freelancer) return res.status(404).send('Cannot find freelancer')
+
   res.render('freelancer', { freelancer })
 })
 
 router.post('/', async (req, res) => {
-  const freelancer = await freelancerDatabase.insert(req.body)
+  const { name, country, description, specialties } = req.body
+
+  const freelancer = await freelancerService.insert({ name, country, description, specialties })
+
   res.send(freelancer)
 })
 
 router.post('/:freelancerId/specialty', async (req, res) => {
-  const freelancer = await freelancerDatabase.find(req.params.freelancerId)
-  if (!freelancer) return res.status(404).send('Cannot find freelancer')
-
+  const { freelancerId } = req.params
   const { field, experience } = req.body
-  const specialty = freelancer.addSpecialty(field, experience)
-  await freelancerDatabase.update(freelancer)
+
+  const specialty = await freelancerService.addSpecialty(freelancerId, field, experience)
 
   res.send(specialty)
 })
 
-router.post('/:freelancerId', async (req, res) => {
-  const freelancer = await freelancerDatabase.find(req.params.freelancerId)
-  if (!freelancer) return res.status(404).send('Cannot find freelancer')
-
-  const { country, description } = req.body
-  const profile = await freelancer.updateProfile(country, description)
-  await freelancerDatabase.update(freelancer)
-  res.send(profile)
-})
-
 router.post('/:freelancerId/jobs', async (req, res) => {
-  const freelancer = await freelancerDatabase.find(req.params.freelancerId)
-  if (!freelancer) return res.status(404).send('Cannot find freelancer')
+  const { freelancerId } = req.params
+  const { title, content, price, deliveryTime } = req.body
 
-  const job = await freelancer.createJob(req.body)
-  await jobDatabase.insert(job)
-  await freelancerDatabase.update(freelancer)
-  res.send('Added a new job')
-})
+  const job = await freelancerService.createJob(freelancerId, title, content, price, deliveryTime)
 
-router.post('/:freelancerId/orders/:orderId/status', async (req, res) => {
-  const freelancer = await freelancerDatabase.find(req.params.freelancerId)
-  if (!freelancer) return res.status(404).send('Cannot find freelancer')
-  const order = await orderDatabase.find(req.params.orderId)
-  if (!order) return res.status(404).send('Cannot find order')
-  const { status } = req.body
-  let result
-
-  switch (status) {
-    case 0:
-      result = freelancer.resetOrder(order)
-      break
-    case 1:
-      result = freelancer.startOrder(order)
-      break
-    case 2:
-      result = freelancer.finishOrder(order)
-      break
-    case 3:
-      result = freelancer.cancelOrder(order)
-      break
-    default:
-      res.send('Error')
-      break
-  }
-
-  await orderDatabase.update(order)
-  res.send(result)
+  res.send(job)
 })
 
 router.delete('/:freelancerId', async (req, res) => {
-  await freelancerDatabase.removeBy('id', req.params.freelancerId)
+  const { freelancerId } = req.params
 
-  res.send('OK')
-})
-
-router.delete('/:freelancerId/jobs/:jobId', async (req, res) => {
-  const freelancer = await freelancerDatabase.find(req.params.freelancerId)
-  if (!freelancer) return res.status(404).send('Cannot find freelancer')
-
-  const result = await freelancer.removeJob(req.params.jobId)
-  await freelancerDatabase.update(freelancer)
-  await jobDatabase.removeBy('id', req.params.jobId)
+  const result = await freelancerService.removeBy('_id', freelancerId)
 
   res.send(result)
 })
 
-router.put('/:freelancerId/jobs/:jobId', async (req, res) => {
-  const freelancer = await freelancerDatabase.find(req.params.freelancerId)
-  if (!freelancer) return res.status(404).send('Cannot find freelancer')
+router.delete('/:freelancerId/jobs/:jobId', async (req, res) => {
+  const { freelancerId, jobId } = req.params
 
-  const job = await freelancer.updateJob(req.params.jobId, req.body)
-  await jobDatabase.update(job)
-  await freelancerDatabase.update(freelancer)
-  res.send('Updated the job')
+  const result = await freelancerService.removeJob(freelancerId, jobId)
+
+  res.send(result)
+})
+
+router.patch('/:freelancerId/orders/:orderId/status', async (req, res) => {
+  const { freelancerId, orderId } = req.params
+  const { status } = req.body
+
+  const result = await freelancerService.changeStatus(freelancerId, orderId, status)
+
+  res.send(result)
+})
+
+router.patch('/:freelancerId/jobs/:jobId', async (req, res) => {
+  const { freelancerId, jobId } = req.params
+  const { title, content, price, deliveryTime } = req.body
+
+  const job = await freelancerService.updateJob(freelancerId, jobId, title, content, price, deliveryTime)
+
+  res.send(job)
+})
+
+router.patch('/:freelancerId', async (req, res) => {
+  const { freelancerId } = req.params
+  const { country, description } = req.body
+
+  const updatedFreelancer = await freelancerService.update(freelancerId, { country, description })
+
+  res.send(updatedFreelancer)
 })
 
 module.exports = router
