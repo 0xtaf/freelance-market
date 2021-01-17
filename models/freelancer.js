@@ -1,6 +1,3 @@
-// const { v4: uuidv4 } = require('uuid');
-// const { status } = require('./order')
-
 const mongoose = require('mongoose')
 
 const FreelancerSchema = mongoose.Schema({

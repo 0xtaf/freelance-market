@@ -1,6 +1,3 @@
-// const { Order, status } = require('./order')
-// const { v4: uuidv4 } = require('uuid');
-
 const mongoose = require('mongoose')
 
 const EmployerSchema = new mongoose.Schema({
