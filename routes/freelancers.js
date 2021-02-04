@@ -39,9 +39,13 @@ router.post('/:freelancerId/jobs', async (req, res) => {
   const { freelancerId } = req.params
   const { title, content, price, deliveryTime } = req.body
 
-  const job = await freelancerService.createJob(freelancerId, title, content, price, deliveryTime)
+  try {
+    const job = await freelancerService.createJob(freelancerId, title, content, price, deliveryTime)
 
-  res.send(job)
+    res.send(job)
+  } catch (e) {
+    return res.status(404).send('Server error')
+  }
 })
 
 router.delete('/:freelancerId', async (req, res) => {
