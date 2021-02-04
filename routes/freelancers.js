@@ -84,9 +84,13 @@ router.patch('/:freelancerId/jobs/:jobId', async (req, res) => {
   const { freelancerId, jobId } = req.params
   const { title, content, price, deliveryTime } = req.body
 
-  const job = await freelancerService.updateJob(freelancerId, jobId, title, content, price, deliveryTime)
+  try {
+    const job = await freelancerService.updateJob(freelancerId, jobId, title, content, price, deliveryTime)
 
-  res.send(job)
+    res.send(job)
+  } catch (e) {
+    return res.status(404).send('Server error')
+  }
 })
 
 router.patch('/:freelancerId', async (req, res) => {
