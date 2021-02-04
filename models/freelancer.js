@@ -18,7 +18,7 @@ const FreelancerSchema = mongoose.Schema({
     {
       type: mongoose.Schema.Types.ObjectId,
       ref: 'Job',
-      autopopulate: { maxDepth: 1 }
+      autopopulate: { maxDepth: 2 }
     }
   ]
 })
