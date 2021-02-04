@@ -26,9 +26,13 @@ router.post('/:freelancerId/specialty', async (req, res) => {
   const { freelancerId } = req.params
   const { field, experience } = req.body
 
-  const specialty = await freelancerService.addSpecialty(freelancerId, field, experience)
+  try {
+    const specialty = await freelancerService.addSpecialty(freelancerId, field, experience)
 
-  res.send(specialty)
+    res.send(specialty)
+  } catch (e) {
+    return res.status(404).send('Cannot find freelancer')
+  }
 })
 
 router.post('/:freelancerId/jobs', async (req, res) => {
