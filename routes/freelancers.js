@@ -26,18 +26,26 @@ router.post('/:freelancerId/specialty', async (req, res) => {
   const { freelancerId } = req.params
   const { field, experience } = req.body
 
-  const specialty = await freelancerService.addSpecialty(freelancerId, field, experience)
+  try {
+    const specialty = await freelancerService.addSpecialty(freelancerId, field, experience)
 
-  res.send(specialty)
+    res.send(specialty)
+  } catch (e) {
+    return res.status(404).send('Cannot find freelancer')
+  }
 })
 
 router.post('/:freelancerId/jobs', async (req, res) => {
   const { freelancerId } = req.params
   const { title, content, price, deliveryTime } = req.body
 
-  const job = await freelancerService.createJob(freelancerId, title, content, price, deliveryTime)
+  try {
+    const job = await freelancerService.createJob(freelancerId, title, content, price, deliveryTime)
 
-  res.send(job)
+    res.send(job)
+  } catch (e) {
+    return res.status(404).send('Server error')
+  }
 })
 
 router.delete('/:freelancerId', async (req, res) => {
@@ -51,27 +59,38 @@ router.delete('/:freelancerId', async (req, res) => {
 router.delete('/:freelancerId/jobs/:jobId', async (req, res) => {
   const { freelancerId, jobId } = req.params
 
-  const result = await freelancerService.removeJob(freelancerId, jobId)
+  try {
+    const result = await freelancerService.removeJob(freelancerId, jobId)
 
-  res.send(result)
+    res.send(result)
+  } catch (e) {
+    return res.status(404).send('Server error')
+  }
 })
 
 router.patch('/:freelancerId/orders/:orderId/status', async (req, res) => {
   const { freelancerId, orderId } = req.params
   const { status } = req.body
 
-  const result = await freelancerService.changeStatus(freelancerId, orderId, status)
-
-  res.send(result)
+  try {
+    const result = await freelancerService.changeStatus(freelancerId, orderId, status)
+    res.send(result)
+  } catch (e) {
+    return res.status(404).send('Server error')
+  }
 })
 
 router.patch('/:freelancerId/jobs/:jobId', async (req, res) => {
   const { freelancerId, jobId } = req.params
   const { title, content, price, deliveryTime } = req.body
 
-  const job = await freelancerService.updateJob(freelancerId, jobId, title, content, price, deliveryTime)
+  try {
+    const job = await freelancerService.updateJob(freelancerId, jobId, title, content, price, deliveryTime)
 
-  res.send(job)
+    res.send(job)
+  } catch (e) {
+    return res.status(404).send('Server error')
+  }
 })
 
 router.patch('/:freelancerId', async (req, res) => {

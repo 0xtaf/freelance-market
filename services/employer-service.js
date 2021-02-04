@@ -29,7 +29,7 @@ class EmployerService extends BaseService {
 
   async comment(employerId, jobId, text, rating) {
     const employer = await this.find(employerId)
-    const job = await JobService.find(jobId)
+    const job = await jobService.find(jobId)
 
     const index = employer.orders.findIndex(item => item.job._id == jobId)
     if (index == -1) throw new Error('Cannot find job')

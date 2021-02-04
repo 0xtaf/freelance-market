@@ -32,9 +32,12 @@ router.post('/:employerId/jobs/:jobId/comments', async (req, res) => {
   const { employerId, jobId } = req.params
   const { text, rating } = req.body
 
-  const comment = await employerService.comment(employerId, jobId, text, rating)
-
-  res.send(comment)
+  try {
+    const comment = await employerService.comment(employerId, jobId, text, rating)
+    res.send(comment)
+  } catch (e) {
+    return res.status(404).send('Cannot find the job')
+  }
 })
 
 router.delete('/:employerId', async (req, res) => {
