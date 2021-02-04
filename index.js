@@ -1,4 +1,5 @@
 const express = require('express')
+const cors = require('cors')
 const indexRouter = require('./routes/index')
 const employersRouter = require('./routes/employers')
 const freelancersRouter = require('./routes/freelancers')
@@ -9,6 +10,7 @@ require('./mongo-connection')
 const app = express()
 
 app.use(express.json())
+app.use(cors())
 
 app.set('view engine', 'pug')
 
@@ -18,6 +20,4 @@ app.use('/orders', ordersRouter)
 app.use('/jobs', jobsRouter)
 app.use('/', indexRouter)
 
-app.listen(3000, () => {
-  console.log("started listening on port 3000")
-})
+module.exports = app
