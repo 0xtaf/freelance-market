@@ -51,9 +51,13 @@ router.delete('/:freelancerId', async (req, res) => {
 router.delete('/:freelancerId/jobs/:jobId', async (req, res) => {
   const { freelancerId, jobId } = req.params
 
-  const result = await freelancerService.removeJob(freelancerId, jobId)
+  try {
+    const result = await freelancerService.removeJob(freelancerId, jobId)
 
-  res.send(result)
+    res.send(result)
+  } catch (e) {
+    return res.status(404).send('Server error')
+  }
 })
 
 router.patch('/:freelancerId/orders/:orderId/status', async (req, res) => {
