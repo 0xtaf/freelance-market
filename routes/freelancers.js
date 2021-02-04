@@ -72,9 +72,12 @@ router.patch('/:freelancerId/orders/:orderId/status', async (req, res) => {
   const { freelancerId, orderId } = req.params
   const { status } = req.body
 
-  const result = await freelancerService.changeStatus(freelancerId, orderId, status)
-
-  res.send(result)
+  try {
+    const result = await freelancerService.changeStatus(freelancerId, orderId, status)
+    res.send(result)
+  } catch (e) {
+    return res.status(404).send('Server error')
+  }
 })
 
 router.patch('/:freelancerId/jobs/:jobId', async (req, res) => {
