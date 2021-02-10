@@ -10,16 +10,6 @@ test('base service findby', async done => {
   done()
 })
 
-test('base service save', async done => {
-  const employersToCreate = {
-    name: 'Test save employer'
-  }
-
-  await employerService.save(employersToCreate)
-
-  done()
-})
-
 test('find by name', async done => {
   const rv = await freelancerService.findByName('any name')
 
