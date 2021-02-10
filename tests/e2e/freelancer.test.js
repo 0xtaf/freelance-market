@@ -18,12 +18,12 @@ test('find by name', async done => {
   done()
 })
 
-test('freelancer activities', async done => {
+test('freelancer false id processes', async done => {
+  const fakeId = '600d1096124b784b00622a90'
+
   const freelancerToCreate = {
     name: 'Test freelancer'
   }
-
-  const fakeId = '600d1096124b784b00622a90'
 
   const jobToCreate = {
     title: 'Test Title',
@@ -41,32 +41,18 @@ test('freelancer activities', async done => {
 
   const freelancerResponse = await request.post('/freelancers').send(freelancerToCreate).expect(200)
 
-  await request.post(`/freelancers/${fakeId}/jobs`).send(jobToCreate).expect(404)
-
   const jobResponse = await request
     .post(`/freelancers/${freelancerResponse.body._id}/jobs`)
     .send(jobToCreate)
     .expect(200)
 
+  await request.post(`/freelancers/${fakeId}/jobs`).send(jobToCreate).expect(404)
+
   await request.patch(`/freelancers/${fakeId}/jobs/${jobResponse.body._id}`).send(jobToUpdate).expect(404)
 
   await request.patch(`/freelancers/${freelancerResponse.body._id}/jobs/${fakeId}`).send(jobToUpdate).expect(404)
 
-  await request
-    .patch(`/freelancers/${freelancerResponse.body._id}/jobs/${jobResponse.body._id}`)
-    .send(jobToUpdate)
-    .expect(200)
-
-  await request
-    .patch(`/freelancers/${freelancerResponse.body._id}`)
-    .send({ country: 'country', description: 'any description' })
-    .expect(200)
-
-  await request.get(`/freelancers/${freelancerResponse.body._id}`).expect(200)
-
   await request.get(`/freelancers/${fakeId}`).expect(404)
-
-  await request.get('/freelancers').expect(200)
 
   await request
     .post(`/freelancers/${fakeId}/specialty`)
@@ -76,25 +62,9 @@ test('freelancer activities', async done => {
     })
     .expect(404)
 
-  await request
-    .post(`/freelancers/${freelancerResponse.body._id}/specialty`)
-    .send({
-      field: 'angular',
-      experience: '3 years'
-    })
-    .expect(200)
-
-  await request.get('/').expect(200)
-
-  await request.get(`/search/test`).expect(200)
-
   await request.delete(`/freelancers/${fakeId}/jobs/${jobResponse.body._id}`).expect(404)
 
   await request.delete(`/freelancers/${freelancerResponse.body._id}/jobs/${fakeId}`).expect(404)
-
-  await request.delete(`/freelancers/${freelancerResponse.body._id}/jobs/${jobResponse.body._id}`).expect(200)
-
-  await request.delete(`/freelancers/${freelancerResponse.body._id}`).expect(200)
 
   done()
 })
