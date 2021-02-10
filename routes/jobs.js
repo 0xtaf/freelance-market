@@ -13,13 +13,4 @@ router.get('/:jobId', async (req, res) => {
   res.render('job', { job })
 })
 
-router.patch('/:jobId', async (req, res) => {
-  const { jobId } = req.params
-  const { name } = req.body
-
-  const updatedJob = await employerService.update(jobId, { name })
-
-  res.send(updatedJob)
-})
-
 module.exports = router
