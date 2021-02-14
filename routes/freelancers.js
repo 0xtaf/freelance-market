@@ -2,16 +2,14 @@ const { freelancerService } = require('../services')
 const router = require('express').Router()
 
 router.get('/', async (req, res) => {
-  const freelancers = await freelancerService.load()
-
-  res.render('freelancers', { freelancers })
+  res.send(await freelancerService.load())
 })
 
 router.get('/:freelancerId', async (req, res) => {
   const freelancer = await freelancerService.find(req.params.freelancerId)
   if (!freelancer) return res.status(404).send('Cannot find freelancer')
 
-  res.render('freelancer', { freelancer })
+  res.send(freelancer)
 })
 
 router.post('/', async (req, res) => {
@@ -50,7 +48,6 @@ router.post('/:freelancerId/jobs', async (req, res) => {
 
 router.delete('/:freelancerId', async (req, res) => {
   const { freelancerId } = req.params
-
   const result = await freelancerService.removeBy('_id', freelancerId)
 
   res.send(result)

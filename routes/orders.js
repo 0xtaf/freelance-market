@@ -4,7 +4,7 @@ const router = require('express').Router()
 router.get('/', async (req, res) => {
   const orders = await orderService.load()
 
-  res.render('orders', { orders })
+  res.send(orders)
 })
 
 router.get('/:orderId', async (req, res) => {
