@@ -3,14 +3,15 @@ const router = require('express').Router()
 
 router.get('/', async (req, res) => {
   const employers = await employerService.load()
-  res.render('employers', { employers })
+
+  res.send(employers)
 })
 
 router.get('/:employerId', async (req, res) => {
   const employer = await employerService.find(req.params.employerId)
   if (!employer) return res.status(404).send('Cannot find employer')
 
-  res.render('employer', { employer })
+  res.send(employer)
 })
 
 router.post('/', async (req, res) => {
